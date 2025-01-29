@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Logística - Sistema Completo</title>
+    <title> Logística - Sistema Completo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -160,7 +160,7 @@
         </div>
     </main>
     <footer>
-        <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
+        <p>© 2025 @TUKARTH Logística. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
@@ -210,7 +210,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Rastreamento de Pedido - @tukarth</h1>
+        <h1>Rastreamento de Pedido - </h1>
         <p>Clique no botão abaixo para ser redirecionado ao site dos Correios.</p>
         <a href="https://www.correios.com.br/">Ir para os Correios</a>
     </div>
@@ -218,5 +218,5 @@
 </html>
 
 
-# 
+
 
