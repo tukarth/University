@@ -1,4 +1,4 @@
-# Novo código para site interativo com mais funcionalidades
+# TESTE PARA FACULDADE 
 html_advanced_content = """
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -119,7 +119,7 @@ html_advanced_content = """
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#">Serviços</a>
-        <a href="#" onclick="redirectToCorreios()">Correios</a>
+        <a href="#" onclick="redirectToCorreios(https://www.correios.com.br/)">Correios</a>
         <a href="#">Contato</a>
     </nav>
     <main>
@@ -165,10 +165,5 @@ html_advanced_content = """
 </html>
 """
 
-# Salvando o novo arquivo HTML interativo avançado
-advanced_file_path = "/mnt/data/arthur_logistica_avancado.html"
-
-with open(advanced_file_path, "w") as file:
-    file.write(html_advanced_content)
-
+# 
 advanced_file_path
