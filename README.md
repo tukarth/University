@@ -97,10 +97,11 @@
             const dateCell = row.insertCell(0);
             const statusCell = row.insertCell(1);
             dateCell.textContent = reportDate;
-            statusCell.innerHTML = <a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>;
+            statusCell.innerHTML = <a href=("https://www.correios.com.br")target="_blank">${reportStatus}</a>;
         }
 
-        // Função para redirecionar para o site dos Correios
+    (// Função para redirecionar para o site dos Correios)
+    
         function redirectToCorreios() {
             window.open("https://www.correios.com.br", "_blank");
         }
