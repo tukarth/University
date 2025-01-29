@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -120,6 +120,10 @@
             const reportDate = document.getElementById('reportDate').value;
             const reportStatus = document.getElementById('reportStatus').value;
             const reportType = document.getElementById('reportType').value;
+            if (!reportDate || !reportStatus || !reportType) {
+                alert("Preencha todos os campos antes de adicionar um relatório.");
+                return;
+            }
             const table = document.getElementById('reportTable');
             const row = table.insertRow();
             const dateCell = row.insertCell(0);
@@ -133,34 +137,6 @@
         // Função para redirecionar para o site dos Correios
         function redirectToCorreios() {
             window.open("https://www.correios.com.br", "_blank");
-        }
-
-        // Função para enviar um email usando uma API de serviço de email
-        async function sendEmail() {
-            const email = "arthur.oliveira99@cs.brazcubas.edu.br";
-            const subject = "Contato pelo site Logística";
-            const body = document.getElementById('message').value;
-            try {
-                const response = await fetch('https://api.exemplo.com/send-email', { // Substitua pelo endpoint real da API
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'Bearer SUA_CHAVE_API' // Substitua pela sua chave API
-                    },
-                    body: JSON.stringify({
-                        to: email,
-                        subject: subject,
-                        text: body
-                    }),
-                });
-                if (response.ok) {
-                    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-                } else {
-                    alert("Houve um problema ao enviar a mensagem. Tente novamente mais tarde.");
-                }
-            } catch (error) {
-                alert("Erro ao enviar a mensagem: " + error.message);
-            }
         }
 
         // Função para baixar a tabela de relatórios como PDF
@@ -233,7 +209,9 @@
             </tbody>
         </table>
 
-        <h2>Contato</h2>
-        <div class="form-container">
-            <p>Envie-nos uma mensagem</p>
-            <input type="email" placeholder="Seu email" style="width[_{{{CITATION{{{_1{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_2{](https://github.com/mak-somniferum/momontum/tree/1d0d8230ff6b67a2b99fa0f5220e96d60e23b4bf/js%2Fclock.js)[_{{{CITATION{{{_3{](https://github.com/8529398670/raspi-server/tree/c6c1582a2a6f53de714080a9702f8e3677456488/test%2Fwebsocket%2Fget_errors.js)
+    </main>
+    <footer>
+        <p>&copy; 2025 Logística - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
