@@ -1,169 +1,3 @@
- # TESTE PARA FACULDADE 
-<html_advanced_content>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Logística - Sistema Completo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        nav {
-            background-color: #0056b3;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2rem;
-            text-align: center;
-        }
-        .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-        .form-container {
-            background-color: white;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            border-radius: 8px;
-            width: 80%;
-            max-width: 600px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-        }
-        table {
-            width: 100%;
-            margin: 2rem auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #007bff;
-            color: white;
-        }
-        footer {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-    <script>
-        // Função para atualizar status
-        function updateStatus() {
-            const status = document.getElementById('status').value;
-            const statusDiv = document.getElementById('statusDisplay');
-            const now = new Date().toLocaleTimeString();
-            statusDiv.innerHTML = <p>Status atualizado em: ${now} - ${status}</p>;
-        }
-
-        // Função para adicionar um novo relatório
-        function addReport() {
-            const reportDate = document.getElementById('reportDate').value;
-            const reportStatus = document.getElementById('reportStatus').value;
-            const table = document.getElementById('reportTable');
-            const row = table.insertRow();
-            const dateCell = row.insertCell(0);
-            const statusCell = row.insertCell(1);
-            dateCell.textContent = reportDate;
-            statusCell.innerHTML = <a href=("https://www.correios.com.br")target="_blank">${reportStatus}</a>;
-        }
-
-    (// Função para redirecionar para o site dos Correios)
-    
-        function redirectToCorreios() {
-            window.open("https://www.correios.com.br", "_blank");
-        }
-
-        // Função para simular envio de mensagem
-        function sendMessage() {
-            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <h1>Arthur Logística - Sistema Completo</h1>
-        <p>Gerenciamento logístico eficiente e dinâmico</p>
-    </header>
-    <nav>
-        <a href="#">Página Inicial</a>
-        <a href="#">Serviços</a>
-        <a href="#" onclick="redirectToCorreios(/https://www.correios.com.br/)">Correios</a>
-        <a href="#">Contato</a>
-    </nav>
-    <main>
-        <h2>Atualização de Status</h2>
-        <div class="form-container">
-            <input type="text" id="status" placeholder="Digite o novo status da entrega..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
-            <button class="button" onclick="updateStatus()">Atualizar Status</button>
-        </div>
-        <div id="statusDisplay" class="form-container">
-            <p>Aguardando atualização...</p>
-        </div>
-
-        <h2>Relatórios Logísticos</h2>
-        <div class="form-container">
-            <input type="date" id="reportDate" style="padding: 10px; margin-bottom: 10px;">
-            <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
-            <button class="button" onclick="addReport()">Adicionar Relatório</button>
-        </div>
-        <table id="reportTable">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Status (clique para detalhes)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Relatórios vão aparecer aqui -->
-            </tbody>
-        </table>
-
-        <h2>Contato</h2>
-        <div class="form-container">
-            <p>Envie-nos uma mensagem</p>
-            <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
-            <textarea placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
-            <button class="button" onclick="sendMessage()">Enviar</button>
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 @TUKARTH Logística. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,42 +15,93 @@
             align-items: center;
             min-height: 100vh;
         }
-        .container {
+        .tracking-container {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
             max-width: 600px;
             width: 100%;
-            text-align: center;
         }
         h1 {
+            text-align: center;
             color: #333;
         }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        .tracking-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
         }
-        a:hover {
-            background-color: #0056b3;
+        .step-circle {
+            background-color: #4CAF50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .step-info {
+            margin-left: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+        }
+        .step-date {
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Rastreamento de Pedido - </h1>
-        <p>Clique no botão abaixo para ser redirecionado ao site dos Correios.</p>
-        <a href="https://www.correios.com.br/">Ir para os Correios</a>
+    <div class="tracking-container">
+        <h1>Rastreamento de Pedido - @tukarth</h1>
+
+        <div class="tracking-step">
+            <div class="step-circle">1</div>
+            <div class="step-info">
+                <div class="step-title">Pedido Confirmado</div>
+                <div class="step-date">Data: 25/01/2025</div>
+            </div>
+        </div>
+
+        <div class="tracking-step">
+            <div class="step-circle">2</div>
+            <div class="step-info">
+                <div class="step-title">Em Processamento</div>
+                <div class="step-date">Data: 26/01/2025</div>
+            </div>
+        </div>
+
+        <div class="tracking-step">
+            <div class="step-circle">3</div>
+            <div class="step-info">
+                <div class="step-title">Produto Despachado</div>
+                <div class="step-date">Data: 27/01/2025</div>
+            </div>
+        </div>
+
+        <div class="tracking-step">
+            <div class="step-circle">4</div>
+            <div class="step-info">
+                <div class="step-title">Saiu para Entrega</div>
+                <div class="step-date">Data: 28/01/2025</div>
+            </div>
+        </div>
+
+        <div class="tracking-step">
+            <div class="step-circle">5</div>
+            <div class="step-info">
+                <div class="step-title">Entregue</div>
+                <div class="step-date">Data: 29/01/2025</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
-
 
 
 
