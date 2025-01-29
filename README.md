@@ -1,6 +1,5 @@
-# Criando o código para um site mais interativo com funcionalidades clicáveis
+# TESTE PARA FACULDADE 
 html_interactive_content = """
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
