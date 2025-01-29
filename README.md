@@ -132,7 +132,7 @@
 </head>
 <body>
     <header>
-        <h1>@TUKARTH Logística - Sistema Completo</h1>
+        <h1> Logística </h1>
         <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
