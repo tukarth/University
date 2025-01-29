@@ -1,5 +1,4 @@
-# rastreamento-site
-# Criando um site básico com HTML e CSS para logística
+ logística
 html_content = """
 <!DOCTYPE html>
 <html lang="en">
