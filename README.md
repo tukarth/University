@@ -86,10 +86,4 @@ html_content = """
 </html>
 """
 
-# Salvando o arquivo HTML
-file_path = "/mnt/data/arthur_logistica_site.html"
-
-with open(file_path, "w") as file:
-    file.write(html_content)
-
-file_path
+pela amor
