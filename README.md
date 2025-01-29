@@ -1,4 +1,4 @@
-# TESTE PARA FACULDADE 
+ # TESTE PARA FACULDADE 
 <html_advanced_content>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -164,7 +164,59 @@
     </footer>
 </body>
 </html>
-"""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento de Produto - @tukarth</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rastreamento de Pedido - @tukarth</h1>
+        <p>Clique no botão abaixo para ser redirecionado ao site dos Correios.</p>
+        <a href="https://www.correios.com.br/">Ir para os Correios</a>
+    </div>
+</body>
+</html>
+
 
 # 
-advanced_file_path
+
