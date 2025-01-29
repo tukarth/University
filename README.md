@@ -81,6 +81,9 @@
         .details-link:hover {
             text-decoration: underline;
         }
+        .hidden {
+            display: none;
+        }
         footer {
             background-color: #007bff;
             color: white;
@@ -160,6 +163,25 @@
                 alert("Erro ao enviar a mensagem: " + error.message);
             }
         }
+
+        // Função para baixar a tabela de relatórios como PDF
+        function downloadPDF() {
+            const element = document.getElementById('reportTable');
+            html2pdf().from(element).save('relatorios_logisticos.pdf');
+        }
+
+        // Função para baixar a tabela de relatórios como planilha
+        function downloadExcel() {
+            let table = document.getElementById('reportTable');
+            let rows = [...table.rows];
+            let csvContent = "data:text/csv;charset=utf-8," + rows.map(e => [...e.children].map(e => e.innerText).join(",")).join("\n");
+            let encodedUri = encodeURI(csvContent);
+            let link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "relatorios_logisticos.csv");
+            document.body.appendChild(link); // Required for FF
+            link.click();
+        }
     </script>
 </head>
 <body>
@@ -170,7 +192,7 @@
     </header>
     <nav>
         <a href="#">Página Inicial</a>
-        <a href="#">Serviços</a>
+        <a href="servicos.html">Serviços</a>
         <a href="#" onclick="redirectToCorreios()">Correios</a>
         <a href="#">Contato</a>
     </nav>
@@ -195,29 +217,14 @@
             </select>
             <button class="button" onclick="addReport()">Adicionar Relatório</button>
         </div>
+        <div class="form-container">
+            <button class="button" onclick="downloadPDF()">Salvar como PDF</button>
+            <button class="button" onclick="downloadExcel()">Salvar como Planilha</button>
+        </div>
         <table id="reportTable">
             <thead>
                 <tr>
                     <th>Data</th>
                     <th>Status (clique para detalhes)</th>
                     <th>Tipo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Relatórios vão aparecer aqui -->
-            </tbody>
-        </table>
-
-        <h2>Contato</h2>
-        <div class="form-container">
-            <p>Envie-nos uma mensagem</p>
-            <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
-            <textarea id="message" placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
-            <button class="button" onclick="sendEmail()">Enviar</button>
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 @TUKARTH Logística. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+                </tr[_{{{CITATION{{{_1{](https://github.com/AAndreLuis-dev/HTML-CSS_CursoEmVideo/tree/6428913bc9fbaa312d2cdade3550496520635d65/modulo-01%2Fmodulo-1%28d%29%2Fd002%2FREADME.md)[_{{{CITATION{{{_2{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_3{](https://github.com/mak-somniferum/momontum/tree/1d0d8230ff6b67a2b99fa0f5220e96d60e23b4bf/js%2Fclock.js)[_{{{CITATION{{{_4{](https://github.com/8529398670/raspi-server/tree/c6c1582a2a6f53de714080a9702f8e3677456488/test%2Fwebsocket%2Fget_errors.js)
