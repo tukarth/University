@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -80,9 +81,6 @@
         }
         .details-link:hover {
             text-decoration: underline;
-        }
-        .hidden {
-            display: none;
         }
         footer {
             background-color: #007bff;
@@ -227,4 +225,15 @@
                     <th>Data</th>
                     <th>Status (clique para detalhes)</th>
                     <th>Tipo</th>
-                </tr[_{{{CITATION{{{_1{](https://github.com/AAndreLuis-dev/HTML-CSS_CursoEmVideo/tree/6428913bc9fbaa312d2cdade3550496520635d65/modulo-01%2Fmodulo-1%28d%29%2Fd002%2FREADME.md)[_{{{CITATION{{{_2{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_3{](https://github.com/mak-somniferum/momontum/tree/1d0d8230ff6b67a2b99fa0f5220e96d60e23b4bf/js%2Fclock.js)[_{{{CITATION{{{_4{](https://github.com/8529398670/raspi-server/tree/c6c1582a2a6f53de714080a9702f8e3677456488/test%2Fwebsocket%2Fget_errors.js)
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Relatórios vão aparecer aqui -->
+            </tbody>
+        </table>
+
+        <h2>Contato</h2>
+        <div class="form-container">
+            <p>Envie-nos uma mensagem</p>
+            <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
+            <textarea id="message" placeholder="Sua mensagem..." style="width:[_{{{CITATION{{{_1{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_2{](https://github.com/mak-somniferum/momontum/tree/1d0d8230ff6b67a2b99fa0f5220e96d60e23b4bf/js%2Fclock.js)[_{{{CITATION{{{_3{](https://github.com/8529398670/raspi-server/tree/c6c1582a2a6f53de714080a9702f8e3677456488/test%2Fwebsocket%2Fget_errors.js)
