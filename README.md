@@ -16,6 +16,14 @@
             color: white;
             padding: 1.5rem;
             text-align: center;
+            position: relative;
+        }
+        .clock {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1rem;
+            font-weight: bold;
         }
         nav {
             background-color: #0056b3;
@@ -78,6 +86,19 @@
         }
     </style>
     <script>
+        // Função para atualizar o relógio
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Atualiza o relógio a cada segundo
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+
         // Função para atualizar status
         function updateStatus() {
             const status = document.getElementById('status').value;
@@ -111,7 +132,8 @@
 </head>
 <body>
     <header>
-        <h1> Logística </h1>
+        <h1>@TUKARTH Logística - Sistema Completo</h1>
+        <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
