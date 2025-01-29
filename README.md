@@ -124,12 +124,27 @@
             window.open("https://www.correios.com.br", "_blank");
         }
 
-        // Função para enviar um email
-        function sendEmail() {
+        // Função para enviar um email sem abrir o cliente de email
+        async function sendEmail() {
             const email = "arthur.oliveira99@cs.brazcubas.edu.br";
             const subject = "Contato pelo site Logística";
             const body = document.getElementById('message').value;
-            window.open(`mailto:${email}?subject=${subject}&body=${body}`);
+            const response = await fetch('https://api.example.com/send-email', { // Use um serviço de email API
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    to: email,
+                    subject: subject,
+                    body: body,
+                }),
+            });
+            if (response.ok) {
+                alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+            } else {
+                alert("Houve um problema ao enviar a mensagem. Tente novamente mais tarde.");
+            }
         }
 
         // Função para simular envio de mensagem
