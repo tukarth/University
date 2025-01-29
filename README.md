@@ -1,9 +1,11 @@
-# TESTE PARA FACULDADE 
+# Novo código para site interativo com mais funcionalidades
+html_advanced_content = """
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Logística - Interativo</title>
+    <title>Arthur Logística - Sistema Completo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -95,18 +97,29 @@
             const dateCell = row.insertCell(0);
             const statusCell = row.insertCell(1);
             dateCell.textContent = reportDate;
-            statusCell.textContent = reportStatus;
+            statusCell.innerHTML = <a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>;
+        }
+
+        // Função para redirecionar para o site dos Correios
+        function redirectToCorreios() {
+            window.open("https://www.correios.com.br", "_blank");
+        }
+
+        // Função para simular envio de mensagem
+        function sendMessage() {
+            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
         }
     </script>
 </head>
 <body>
     <header>
-        <h1>Arthur Logística - Sistema de Gestão</h1>
-        <p>Fazendo o seu negócio chegar mais rápido!</p>
+        <h1>Arthur Logística - Sistema Completo</h1>
+        <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#">Serviços</a>
+        <a href="#" onclick="redirectToCorreios()">Correios</a>
         <a href="#">Contato</a>
     </nav>
     <main>
@@ -129,7 +142,7 @@
             <thead>
                 <tr>
                     <th>Data</th>
-                    <th>Status</th>
+                    <th>Status (clique para detalhes)</th>
                 </tr>
             </thead>
             <tbody>
@@ -142,7 +155,7 @@
             <p>Envie-nos uma mensagem</p>
             <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
             <textarea placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
-            <button class="button">Enviar</button>
+            <button class="button" onclick="sendMessage()">Enviar</button>
         </div>
     </main>
     <footer>
@@ -152,6 +165,10 @@
 </html>
 """
 
-# RASTREIO
+# Salvando o novo arquivo HTML interativo avançado
+advanced_file_path = "/mnt/data/arthur_logistica_avancado.html"
 
-interactive_file_path
+with open(advanced_file_path, "w") as file:
+    file.write(html_advanced_content)
+
+advanced_file_path
