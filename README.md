@@ -16,14 +16,6 @@
             color: white;
             padding: 1.5rem;
             text-align: center;
-            position: relative;
-        }
-        .clock {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1rem;
-            font-weight: bold;
         }
         nav {
             background-color: #0056b3;
@@ -65,10 +57,11 @@
             width: 100%;
             margin: 2rem auto;
             border-collapse: collapse;
+            text-align: left;
         }
         th, td {
-            padding: 10px;
-            text-align: center;
+            padding: 12px;
+            text-align: left;
             border: 1px solid #ddd;
         }
         th {
@@ -91,22 +84,21 @@
             bottom: 0;
             width: 100%;
         }
+        .contact-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
-        // Função para atualizar o relógio
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        // Atualiza o relógio a cada segundo
-        setInterval(updateClock, 1000);
-        window.onload = updateClock;
-
         // Função para atualizar status
         function updateStatus() {
             const status = document.getElementById('status').value;
@@ -134,11 +126,6 @@
             typeCell.textContent = reportType;
         }
 
-        // Função para redirecionar para o site dos Correios
-        function redirectToCorreios() {
-            window.open("https://www.correios.com.br", "_blank");
-        }
-
         // Função para baixar a tabela de relatórios como PDF
         function downloadPDF() {
             const element = document.getElementById('reportTable');
@@ -157,19 +144,23 @@
             document.body.appendChild(link); // Required for FF
             link.click();
         }
+
+        // Exibir e-mail apenas após clique
+        function showContactEmail() {
+            document.getElementById('contactInfo').innerHTML = '<a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">arthur.oliveira99@cs.brazcubas.edu.br</a>';
+        }
     </script>
 </head>
 <body>
     <header>
         <h1>Tukarth Logística e Transporte</h1>
-        <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#servicos">Serviços</a>
         <a href="#" onclick="redirectToCorreios()">Correios</a>
-        <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">Contato</a>
+        <a href="#" class="contact-button" onclick="showContactEmail()">Contato</a>
     </nav>
     <main>
         <section id="servicos">
@@ -222,10 +213,11 @@
                 <!-- Relatórios vão aparecer aqui -->
             </tbody>
         </table>
+
+        <div id="contactInfo" style="margin-top: 20px;"></div>
     </main>
     <footer>
         <p>&copy; 2025 Tukarth Logística e Transporte - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
-
