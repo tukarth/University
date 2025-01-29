@@ -111,7 +111,7 @@
 </head>
 <body>
     <header>
-        <h1>@TUKARTH Logística - Sistema Completo</h1>
+        <h1> Logística </h1>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
