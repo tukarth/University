@@ -119,7 +119,7 @@ html_advanced_content = """
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#">Serviços</a>
-        <a href="#" onclick="redirectToCorreios(https://www.correios.com.br/)">Correios</a>
+        <a href="#" onclick="redirectToCorreios(/https://www.correios.com.br/)">Correios</a>
         <a href="#">Contato</a>
     </nav>
     <main>
