@@ -1,5 +1,4 @@
 # TESTE PARA FACULDADE 
-html_interactive_content = """
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -154,9 +153,5 @@ html_interactive_content = """
 """
 
 # RASTREIO
-interactive_file_path = "/mnt/data/arthur_logistica_interativo.html"
-
-with open(interactive_file_path, "w") as file:
-    file.write(html_interactive_content)
 
 interactive_file_path
