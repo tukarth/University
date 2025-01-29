@@ -154,7 +154,7 @@ html_interactive_content = """
 </html>
 """
 
-# Salvando o arquivo HTML interativo
+# RASTREIO
 interactive_file_path = "/mnt/data/arthur_logistica_interativo.html"
 
 with open(interactive_file_path, "w") as file:
