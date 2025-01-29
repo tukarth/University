@@ -1,9 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logística - Sistema Completo</title>
+    <title>Tukarth Logística e Transporte</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -161,17 +161,31 @@
 </head>
 <body>
     <header>
-        <h1>Logística</h1>
+        <h1>Tukarth Logística e Transporte</h1>
         <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
         <a href="#">Página Inicial</a>
-        <a href="servicos.html">Serviços</a>
+        <a href="#servicos">Serviços</a>
         <a href="#" onclick="redirectToCorreios()">Correios</a>
-        <a href="#">Contato</a>
+        <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">Contato</a>
     </nav>
     <main>
+        <section id="servicos">
+            <h2>Serviços Tukarth</h2>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Gerenciamento de Estoques</li>
+                <li>Transporte de Mercadorias</li>
+                <li>Logística Reversa</li>
+                <li>Consultoria em Processos Logísticos</li>
+                <li>Distribuição e Entrega Rápida</li>
+                <li>Gestão de Transporte de Cargas Pesadas</li>
+                <li>Monitoramento e Rastreamento de Entregas</li>
+                <li>Coordenação de Frota</li>
+            </ul>
+        </section>
+
         <h2>Atualização de Status</h2>
         <div class="form-container">
             <input type="text" id="status" placeholder="Digite o novo status da entrega..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
@@ -208,10 +222,10 @@
                 <!-- Relatórios vão aparecer aqui -->
             </tbody>
         </table>
-
     </main>
     <footer>
-        <p>&copy; 2025 Logística - Todos os direitos reservados</p>
+        <p>&copy; 2025 Tukarth Logística e Transporte - Todos os direitos reservados</p>
     </footer>
 </body>
 </html>
+
