@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -123,6 +124,14 @@
             window.open("https://www.correios.com.br", "_blank");
         }
 
+        // Função para enviar um email
+        function sendEmail() {
+            const email = "arthur.oliveira99@cs.brazcubas.edu.br";
+            const subject = "Contato pelo site Logística";
+            const body = document.getElementById('message').value;
+            window.open(`mailto:${email}?subject=${subject}&body=${body}`);
+        }
+
         // Função para simular envio de mensagem
         function sendMessage() {
             alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
@@ -131,7 +140,7 @@
 </head>
 <body>
     <header>
-        <h1> Logística </h1>
+        <h1>Logística</h1>
         <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
@@ -173,8 +182,8 @@
         <div class="form-container">
             <p>Envie-nos uma mensagem</p>
             <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
-            <textarea placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
-            <button class="button" onclick="sendMessage()">Enviar</button>
+            <textarea id="message" placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
+            <button class="button" onclick="sendEmail()">Enviar</button>
         </div>
     </main>
     <footer>
@@ -182,3 +191,4 @@
     </footer>
 </body>
 </html>
+
