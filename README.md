@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logística e Transporte</title>
+    <title>Tukarth Logística e Transporte</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,14 +16,6 @@
             color: white;
             padding: 1.5rem;
             text-align: center;
-            position: relative;
-        }
-        .clock {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1rem;
-            font-weight: bold;
         }
         nav {
             background-color: #0056b3;
@@ -111,20 +103,7 @@
             background-color: #0056b3;
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <script>
-        // Função para atualizar o relógio
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const seconds = String(now.getSeconds()).padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-        // Atualiza o relógio a cada segundo
-        setInterval(updateClock, 1000);
-        window.onload = updateClock;
-
         // Função para atualizar status
         function updateStatus() {
             const status = document.getElementById('status').value;
@@ -152,30 +131,11 @@
             const statusCell = row.insertCell(1);
             const typeCell = row.insertCell(2);
             dateCell.textContent = reportDate;
-            statusCell.innerHTML = `<a href="https://www.correios.com.br" class="details-link">${reportStatus}</a>`;
+            statusCell.innerHTML = `<a href="#" class="details-link">${reportStatus}</a>`;
             typeCell.textContent = reportType;
         }
 
-        // Função para baixar a tabela de relatórios como PDF
-        function downloadPDF() {
-            const element = document.getElementById('reportTable');
-            html2pdf().from(element).save('relatorios_logisticos.pdf');
-        }
-
-        // Função para baixar a tabela de relatórios como planilha
-        function downloadExcel() {
-            let table = document.getElementById('reportTable');
-            let rows = [...table.rows];
-            let csvContent = "data:text/csv;charset=utf-8," + rows.map(e => [...e.children].map(e => e.innerText).join(",")).join("\n");
-            let encodedUri = encodeURI(csvContent);
-            let link = document.createElement("a");
-            link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "relatorios_logisticos.csv");
-            document.body.appendChild(link); // Required for FF
-            link.click();
-        }
-
-        // Exibir e-mail apenas após clique
+        // Função para exibir e-mail apenas após clique
         function showContactEmail() {
             document.getElementById('contactInfo').innerHTML = '<a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">arthur.oliveira99@cs.brazcubas.edu.br</a>';
         }
@@ -184,7 +144,6 @@
 <body>
     <header>
         <h1>Tukarth Logística e Transporte</h1>
-        <div class="clock" id="clock"></div>
         <p>Gerenciamento logístico eficiente e dinâmico</p>
     </header>
     <nav>
@@ -227,5 +186,23 @@
             </select>
             <button class="button" onclick="addReport()">Adicionar Relatório</button>
         </div>
-        <div class="form-container">
-            <button class="button[_{{{CITATION{{{_1{](https://github.com/AAndreLuis-dev/HTML-CSS_CursoEmVideo/tree/6428913bc9fbaa312d2cdade3550496520635d65/modulo-01%2Fmodulo-1%28d%29%2Fd002%2FREADME.md)[_{{{CITATION{{{_2{](https://github.com/lgfranco22/blog/tree/2ff765f5547038ea91aa40671858d9fd9d5ffb28/entrar.php)[_{{{CITATION{{{_3{](https://github.com/mak-somniferum/momontum/tree/1d0d8230ff6b67a2b99fa0f5220e96d60e23b4bf/js%2Fclock.js)[_{{{CITATION{{{_4{](https://github.com/8529398670/raspi-server/tree/c6c1582a2a6f53de714080a9702f8e3677456488/test%2Fwebsocket%2Fget_errors.js)
+        <table id="reportTable">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Status (clique para detalhes)</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Relatórios vão aparecer aqui -->
+            </tbody>
+        </table>
+
+        <div id="contactInfo" style="margin-top: 20px;"></div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Tukarth Logística e Transporte - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
