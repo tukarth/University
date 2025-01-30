@@ -68,6 +68,12 @@
             background-color: #007bff;
             color: white;
         }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #e6f7ff;
+        }
         .details-link {
             color: #007bff;
             text-decoration: none;
@@ -104,7 +110,11 @@
             const status = document.getElementById('status').value;
             const statusDiv = document.getElementById('statusDisplay');
             const now = new Date().toLocaleTimeString();
-            statusDiv.innerHTML = `<p>Status atualizado em: ${now} - ${status}</p>`;
+            if (status) {
+                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
+            } else {
+                alert("Por favor, digite um status válido.");
+            }
         }
 
         // Função para adicionar um novo relatório
@@ -122,7 +132,7 @@
             const statusCell = row.insertCell(1);
             const typeCell = row.insertCell(2);
             dateCell.textContent = reportDate;
-            statusCell.innerHTML = `<a href="https://www.correios.com.br" target="_blank" class="details-link">${reportStatus}</a>`;
+            statusCell.innerHTML = `<a href="#" class="details-link">${reportStatus}</a>`;
             typeCell.textContent = reportType;
         }
 
@@ -159,7 +169,6 @@
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#servicos">Serviços</a>
-        <a href="#" onclick="redirectToCorreios()">Correios</a>
         <a href="#" class="contact-button" onclick="showContactEmail()">Contato</a>
     </nav>
     <main>
@@ -221,3 +230,4 @@
     </footer>
 </body>
 </html>
+
