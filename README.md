@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tukarth Logística e Transporte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
@@ -15,11 +17,22 @@
             color: white;
             padding: 1.5rem;
             text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        header img {
+            width: 50px;
         }
         nav {
             background-color: #0056b3;
             padding: 1rem;
             text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
         }
         nav a {
             color: white;
@@ -27,8 +40,11 @@
             text-decoration: none;
             font-weight: bold;
         }
+        nav a:hover {
+            text-decoration: underline;
+        }
         main {
-            padding: 2rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
         .button {
@@ -148,21 +164,22 @@
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#servicos">Serviços</a>
-        <a href="#" class="contact-button" onclick="showContactEmail()">Contato</a>
+        <a href="#contato" class="contact-button" onclick="showContactEmail()">Contato</a>
     </nav>
     <main>
         <section id="servicos">
             <h2>Serviços Tukarth</h2>
-            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-                <li>Gerenciamento de Estoques</li>
-                <li>Transporte de Mercadorias</li>
-                <li>Logística Reversa</li>
-                <li>Consultoria em Processos Logísticos</li>
-                <li>Distribuição e Entrega Rápida</li>
-                <li>Gestão de Transporte de Cargas Pesadas</li>
-                <li>Monitoramento e Rastreamento de Entregas</li>
-                <li>Coordenação de Frota</li>
-            </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto;">
+                <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);">
+                    <h3>Gerenciamento de Estoques</h3>
+                </div>
+                <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);">
+                    <h3>Transporte de Mercadorias</h3>
+                </div>
+                <div style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);">
+                    <h3>Logística Reversa</h3>
+                </div>
+            </div>
         </section>
 
         <h2>Atualização de Status</h2>
