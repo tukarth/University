@@ -102,6 +102,51 @@
         .contact-button:hover {
             background-color: #0056b3;
         }
+        .chatbot-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .chatbot-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .chatbot-messages {
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .chatbot-input-container {
+            display: flex;
+            padding: 10px;
+        }
+        .chatbot-input-container input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chatbot-input-container button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
     </style>
     <script>
         // Função para atualizar status
@@ -144,6 +189,24 @@
         function goToCorreios() {
             window.open('https://www.correios.com.br', '_blank');
         }
+
+        // Função para abrir o chatbot
+        function toggleChatbot() {
+            const chatbot = document.getElementById('chatbotContainer');
+            chatbot.style.display = chatbot.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Função para enviar mensagem no chatbot
+        function sendMessage() {
+            const input = document.getElementById('chatbotInput');
+            const messagesContainer = document.getElementById('chatbotMessages');
+            if (input.value) {
+                const message = document.createElement('p');
+                message.textContent = `Usuário: ${input.value}`;
+                messagesContainer.appendChild(message);
+                input.value = '';
+            }
+        }
     </script>
 </head>
 <body>
@@ -174,41 +237,4 @@
 
         <h2>Atualização de Status</h2>
         <div class="form-container">
-            <input type="text" id="status" placeholder="Digite o novo status da entrega..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
-            <button class="button" onclick="updateStatus()">Atualizar Status</button>
-        </div>
-        <div id="statusDisplay" class="form-container">
-            <p>Aguardando atualização...</p>
-        </div>
-
-        <h2>Relatórios Logísticos</h2>
-        <div class="form-container">
-            <input type="date" id="reportDate" style="padding: 10px; margin-bottom: 10px;">
-            <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
-            <select id="reportType" style="width: 80%; padding: 10px; margin-bottom: 10px;">
-                <option value="Logística">Logística</option>
-                <option value="Inventário">Inventário</option>
-                <option value="Transporte">Transporte</option>
-            </select>
-            <button class="button" onclick="addReport()">Adicionar Relatório</button>
-        </div>
-        <table id="reportTable">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Status (clique para detalhes)</th>
-                    <th>Tipo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Relatórios vão aparecer aqui -->
-            </tbody>
-        </table>
-
-        <div id="contactInfo" style="margin-top: 20px;"></div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Tukarth Logística e Transporte - Todos os direitos reservados</p>
-    </footer>
-</body>
-</html>
+            <input type="text" id="
