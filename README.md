@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -11,6 +11,11 @@ export default function TukarthLogistica() {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatMessages, setChatMessages] = useState([]);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log("Aplicação carregada com sucesso");
+  }, []);
 
   const updateStatus = () => {
     if (status.trim() !== "") {
@@ -38,7 +43,7 @@ export default function TukarthLogistica() {
           <CardContent>
             <h2 className="text-xl font-bold mb-4">Atualizar Status</h2>
             <Input placeholder="Digite o status..." value={status} onChange={(e) => setStatus(e.target.value)} />
-            <Button className="mt-4 w-full" onClick={updateStatus}>Atualizar</Button>
+            <Button className="mt-4 w-full" onClick={updateStatus} disabled={loading}>Atualizar</Button>
             <ul className="mt-4">
               {statusLog.map((item, index) => (
                 <li key={index} className="text-sm bg-gray-200 p-2 rounded mt-1">
