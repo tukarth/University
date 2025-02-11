@@ -1,20 +1,35 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logística - Sistema Completo</title>
+    <title>Arthur Logística - Sistema Completo</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+        /* Estilos Gerais */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
         header {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
-            padding: 1.5rem;
             text-align: center;
+            padding: 2rem 1rem;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1rem;
+            opacity: 0.8;
         }
         nav {
             background-color: #0056b3;
@@ -26,31 +41,41 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
         }
         main {
             padding: 2rem;
             text-align: center;
         }
-        .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
         .form-container {
-            background-color: white;
+            background: white;
             padding: 1.5rem;
             margin: 2rem auto;
             border-radius: 8px;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #0056b3;
         }
         table {
             width: 100%;
@@ -66,60 +91,38 @@
             background-color: #007bff;
             color: white;
         }
+        td a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        td a:hover {
+            text-decoration: underline;
+        }
         footer {
-            background-color: #007bff;
+            background: #007bff;
             color: white;
             text-align: center;
             padding: 1rem;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
     </style>
-    <script>
-        // Função para atualizar status
-        function updateStatus() {
-            const status = document.getElementById('status').value;
-            const statusDiv = document.getElementById('statusDisplay');
-            const now = new Date().toLocaleTimeString();
-            if (status.trim() !== "") {
-                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
-            } else {
-                alert("Por favor, digite um status válido.");
-            }
-        }
-
-        // Função para adicionar um novo relatório
-        function addReport() {
-            const reportDate = document.getElementById('reportDate').value;
-            const reportStatus = document.getElementById('reportStatus').value;
-            if (!reportDate || !reportStatus) {
-                alert("Preencha todos os campos antes de adicionar um relatório.");
-                return;
-            }
-            const table = document.getElementById('reportTable').getElementsByTagName('tbody')[0];
-            const newRow = table.insertRow();
-            const dateCell = newRow.insertCell(0);
-            const statusCell = newRow.insertCell(1);
-            dateCell.textContent = reportDate;
-            statusCell.innerHTML = `<a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>`;
-        }
-
-        // Função para redirecionar para o site dos Correios
-        function redirectToCorreios() {
-            window.open("https://www.correios.com.br", "_blank");
-        }
-
-        // Função para simular envio de mensagem
-        function sendMessage() {
-            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        }
-    </script>
 </head>
 <body>
     <header>
-        <h1>Arthur Logística - Sistema Completo</h1>
-        <p>Gerenciamento logístico eficiente e dinâmico</p>
+        <h1>Arthur Logística</h1>
+        <p>Soluções logísticas eficientes e inovadoras</p>
     </header>
     <nav>
         <a href="#">Página Inicial</a>
@@ -130,17 +133,16 @@
     <main>
         <h2>Atualização de Status</h2>
         <div class="form-container">
-            <input type="text" id="status" placeholder="Digite o novo status da entrega..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
+            <input type="text" id="status" placeholder="Digite o novo status da entrega..." required>
             <button class="button" onclick="updateStatus()">Atualizar Status</button>
         </div>
         <div id="statusDisplay" class="form-container">
             <p>Aguardando atualização...</p>
         </div>
-
         <h2>Relatórios Logísticos</h2>
         <div class="form-container">
-            <input type="date" id="reportDate" style="padding: 10px; margin-bottom: 10px;">
-            <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." style="width: 80%; padding: 10px; margin-bottom: 10px;">
+            <input type="date" id="reportDate" required>
+            <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." required>
             <button class="button" onclick="addReport()">Adicionar Relatório</button>
         </div>
         <table id="reportTable">
@@ -154,17 +156,37 @@
                 <!-- Relatórios vão aparecer aqui -->
             </tbody>
         </table>
-
         <h2>Contato</h2>
         <div class="form-container">
             <p>Envie-nos uma mensagem</p>
-            <input type="email" placeholder="Seu email" style="width: 80%; padding: 10px; margin-bottom: 10px;"><br>
-            <textarea placeholder="Sua mensagem..." style="width: 80%; padding: 10px; margin-bottom: 10px; height: 100px;"></textarea><br>
+            <input type="email" placeholder="Seu email" required>
+            <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
             <button class="button" onclick="sendMessage()">Enviar</button>
         </div>
     </main>
     <footer>
         <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        // Função para atualizar status
+        function updateStatus() {
+            const status = document.getElementById('status').value.trim();
+            const statusDiv = document.getElementById('statusDisplay');
+            const now = new Date().toLocaleTimeString();
+            if (status) {
+                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
+            } else {
+                alert("Por favor, digite um status válido.");
+            }
+        }
+
+        // Função para adicionar um novo relatório
+        function addReport() {
+            const reportDate = document.getElementById('reportDate').value;
+            const reportStatus = document.getElementById('reportStatus').value.trim();
+            if (!reportDate || !reportStatus) {
+                alert("Preencha todos os campos antes de adicionar um relatório.");
+                return;
+            }
+            const table = document
