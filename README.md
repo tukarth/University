@@ -1,10 +1,9 @@
-<html_advanced_content>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Logística - Sistema Completo</title>
+    <title>Logística - Sistema Completo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,23 +83,30 @@
             const status = document.getElementById('status').value;
             const statusDiv = document.getElementById('statusDisplay');
             const now = new Date().toLocaleTimeString();
-            statusDiv.innerHTML = <p>Status atualizado em: ${now} - ${status}</p>;
+            if (status.trim() !== "") {
+                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
+            } else {
+                alert("Por favor, digite um status válido.");
+            }
         }
 
         // Função para adicionar um novo relatório
         function addReport() {
             const reportDate = document.getElementById('reportDate').value;
             const reportStatus = document.getElementById('reportStatus').value;
-            const table = document.getElementById('reportTable');
-            const row = table.insertRow();
-            const dateCell = row.insertCell(0);
-            const statusCell = row.insertCell(1);
+            if (!reportDate || !reportStatus) {
+                alert("Preencha todos os campos antes de adicionar um relatório.");
+                return;
+            }
+            const table = document.getElementById('reportTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            const dateCell = newRow.insertCell(0);
+            const statusCell = newRow.insertCell(1);
             dateCell.textContent = reportDate;
-            statusCell.innerHTML = <a href=("https://www.correios.com.br")target="_blank">${reportStatus}</a>;
+            statusCell.innerHTML = `<a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>`;
         }
 
-    (// Função para redirecionar para o site dos Correios)
-    
+        // Função para redirecionar para o site dos Correios
         function redirectToCorreios() {
             window.open("https://www.correios.com.br", "_blank");
         }
@@ -119,7 +125,7 @@
     <nav>
         <a href="#">Página Inicial</a>
         <a href="#">Serviços</a>
-        <a href="#" onclick="redirectToCorreios(/https://www.correios.com.br/)">Correios</a>
+        <a href="#" onclick="redirectToCorreios()">Correios</a>
         <a href="#">Contato</a>
     </nav>
     <main>
@@ -159,59 +165,7 @@
         </div>
     </main>
     <footer>
-        <p>© 2025 @TUKARTH Logística. Todos os direitos reservados.</p>
+        <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
     </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastreamento de Produto - @tukarth</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-        }
-        a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        a:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Rastreamento de Pedido - </h1>
-        <p>Clique no botão abaixo para ser redirecionado ao site dos Correios.</p>
-        <a href="https://www.correios.com.br/">Ir para os Correios</a>
-    </div>
 </body>
 </html>
