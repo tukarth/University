@@ -59,6 +59,9 @@ export default function TukarthLogistica() {
         <Button className="flex items-center" onClick={() => setChatOpen(!chatOpen)}>
           <MessageCircle className="mr-2" /> Chatbot
         </Button>
+        <Button className="flex items-center ml-2" onClick={() => alert("Função adicional!")}>
+          <Truck className="mr-2" /> Nova Função
+        </Button>
       </div>
       
       {chatOpen && (
