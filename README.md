@@ -161,25 +161,12 @@
         <p>Soluções acadêmicas eficientes e inovadoras</p>
     </header>
     <nav>
-        <a href="#status">Atualização de Status</a>
         <a href="#files">Arquivos</a>
         <a href="#comments">Comentários</a>
         <a href="#contact">Contato</a>
         <a href="#admin">Administração</a>
     </nav>
     <main>
-        <!-- Atualização de Status -->
-        <section id="status">
-            <h2>Atualização de Status</h2>
-            <div class="form-container">
-                <input type="text" id="statusInput" placeholder="Digite o novo status do trabalho..." required>
-                <button class="button" onclick="updateStatus()">Atualizar Status</button>
-            </div>
-            <div id="statusDisplay" class="form-container">
-                <p>Aguardando atualização...</p>
-            </div>
-        </section>
-
         <!-- Arquivos -->
         <section id="files">
             <h2>Arquivos</h2>
@@ -194,11 +181,7 @@
             <h2>Comentários</h2>
             <div class="form-container">
                 <textarea id="commentInput" placeholder="Deixe seu comentário..." rows="5" required></textarea>
-                <button class="button" onclick="addComment()">Enviar Comentário</button>
-            </div>
-            <div id="commentsList" class="form-container">
-                <h3>Últimos Comentários</h3>
-                <ul id="commentsUl"></ul>
+                <button class="button" onclick="sendComment()">Enviar Comentário</button>
             </div>
         </section>
 
@@ -207,9 +190,9 @@
             <h2>Contato</h2>
             <div class="form-container">
                 <p>Envie-nos uma mensagem</p>
-                <input type="email" placeholder="Seu email" required>
-                <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
-                <button class="button" onclick="sendMessage()">Enviar</button>
+                <input type="email" id="contactEmail" placeholder="Seu email" required>
+                <textarea id="contactMessage" placeholder="Sua mensagem..." rows="5" required></textarea>
+                <button class="button" onclick="sendContactMessage()">Enviar</button>
             </div>
         </section>
 
@@ -229,9 +212,6 @@
                 <h3>Gerenciar Arquivos</h3>
                 <input type="file" id="fileUpload" />
                 <button class="button" onclick="uploadFile()">Enviar Arquivo</button>
-                <h3>Postar Comentário Administrativo</h3>
-                <textarea id="adminCommentInput" placeholder="Digite seu comentário..." rows="5" required></textarea>
-                <button class="button" onclick="postAdminComment()">Publicar</button>
                 <h3>Estatísticas</h3>
                 <canvas id="statsChart" width="400" height="200"></canvas>
             </div>
@@ -261,49 +241,32 @@
             }
         }
 
-        // Função para atualizar status
-        function updateStatus() {
-            const status = document.getElementById('statusInput').value.trim();
-            const statusDiv = document.getElementById('statusDisplay');
-            const now = new Date().toLocaleTimeString();
-            if (status) {
-                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
-            } else {
-                alert("Por favor, digite um status válido.");
-            }
-        }
-
-        // Função para adicionar comentários
-        function addComment() {
+        // Função para enviar comentários para o email
+        function sendComment() {
             const comment = document.getElementById('commentInput').value.trim();
             if (!comment) {
                 alert("Por favor, digite um comentário válido.");
                 return;
             }
-            const commentsUl = document.getElementById('commentsUl');
-            const li = document.createElement('li');
-            li.textContent = comment;
-            commentsUl.appendChild(li);
+            const emailBody = encodeURIComponent(`Novo comentário recebido:\n\n${comment}`);
+            window.location.href = `mailto:arthur.oliveira99@cs.brazcubas.edu.br?subject=Novo%20Comentário&body=${emailBody}`;
+            alert("Comentário enviado com sucesso!");
             document.getElementById('commentInput').value = '';
         }
 
-        // Função para postar comentários administrativos
-        function postAdminComment() {
-            const adminComment = document.getElementById('adminCommentInput').value.trim();
-            if (!adminComment) {
-                alert("Por favor, digite um comentário válido.");
+        // Função para enviar mensagens de contato
+        function sendContactMessage() {
+            const email = document.getElementById('contactEmail').value.trim();
+            const message = document.getElementById('contactMessage').value.trim();
+            if (!email || !message) {
+                alert("Por favor, preencha todos os campos.");
                 return;
             }
-            const commentsUl = document.getElementById('commentsUl');
-            const li = document.createElement('li');
-            li.textContent = `[ADMIN] ${adminComment}`;
-            commentsUl.appendChild(li);
-            document.getElementById('adminCommentInput').value = '';
-        }
-
-        // Função para simular envio de mensagem
-        function sendMessage() {
-            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+            const emailBody = encodeURIComponent(`Nova mensagem de contato:\n\nEmail: ${email}\nMensagem: ${message}`);
+            window.location.href = `mailto:arthur.oliveira99@cs.brazcubas.edu.br?subject=Nova%20Mensagem%20de%20Contato&body=${emailBody}`;
+            alert("Mensagem enviada com sucesso!");
+            document.getElementById('contactEmail').value = '';
+            document.getElementById('contactMessage').value = '';
         }
 
         // Função para upload de arquivos
