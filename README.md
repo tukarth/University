@@ -199,6 +199,9 @@
                 <button class="button" onclick="loginAdmin()">Entrar</button>
             </div>
             <div id="adminPanel" class="hidden">
+                <h3>Gerenciar Arquivos</h3>
+                <input type="file" id="fileUpload" />
+                <button class="button" onclick="uploadFile()">Enviar Arquivo</button>
                 <h3>Postar Comentário Administrativo</h3>
                 <textarea id="adminCommentInput" placeholder="Digite seu comentário..." rows="5" required></textarea>
                 <button class="button" onclick="postAdminComment()">Publicar</button>
@@ -219,7 +222,7 @@
         function loginAdmin() {
             const username = document.getElementById('adminUsername').value.trim();
             const password = document.getElementById('adminPassword').value.trim();
-            if (username === "admin" && password === "1234") {
+            if (username === "admin" && password === "secure123") {
                 document.getElementById('adminLogin').classList.add('hidden');
                 document.getElementById('adminPanel').classList.remove('hidden');
             } else {
@@ -271,6 +274,13 @@
         function sendMessage() {
             alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
         }
-    </script>
-</body>
-</html>
+
+        // Função para upload de arquivos
+        function uploadFile() {
+            const fileInput = document.getElementById('fileUpload');
+            if (fileInput.files.length === 0) {
+                alert("Por favor, selecione um arquivo para enviar.");
+                return;
+            }
+            const fileName = fileInput.files[0].name;
+            alert(`Arquivo "${fileName}" enviado com sucesso!`);
