@@ -118,22 +118,31 @@
             }
         }
 
-        /* Estilos Adicionais para Preencher Espaço */
-        .extra-section {
-            margin: 2rem auto;
-            padding: 1rem;
+        /* Estilos Adicionais */
+        .admin-dashboard {
             background: #fff;
+            padding: 1.5rem;
+            margin: 2rem auto;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             width: 90%;
-            max-width: 600px;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .extra-section h3 {
+        .admin-dashboard h2 {
             margin-bottom: 1rem;
         }
-        .extra-section p {
-            line-height: 1.8;
-            color: #555;
+        .admin-dashboard ul {
+            list-style: none;
+            padding: 0;
+        }
+        .admin-dashboard li {
+            background: #f5f5f5;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
         }
     </style>
 </head>
@@ -147,7 +156,7 @@
         <a href="#reports">Relatórios</a>
         <a href="#comments">Comentários</a>
         <a href="#contact">Contato</a>
-        <a href="#extras">Extras</a>
+        <a href="#admin">Administração</a>
     </nav>
     <main>
         <!-- Atualização de Status -->
@@ -190,7 +199,7 @@
                 <textarea id="commentInput" placeholder="Deixe seu comentário..." rows="5" required></textarea>
                 <button class="button" onclick="addComment()">Enviar Comentário</button>
             </div>
-            <div id="commentsList" class="form-container">
+            <div id="commentsList" class="form-container hidden">
                 <h3>Últimos Comentários</h3>
                 <ul id="commentsUl"></ul>
             </div>
@@ -207,9 +216,22 @@
             </div>
         </section>
 
-        <!-- Seção Extra para Preencher Espaço -->
-        <section id="extras" class="extra-section">
-            desenvolvido.com
+        <!-- Dashboard Administrativo -->
+        <section id="admin" class="admin-dashboard hidden">
+            <h2>Dashboard Administrativo</h2>
+            <div>
+                <button class="button" onclick="toggleLogin()">Entrar como Administrador</button>
+            </div>
+            <div id="adminLogin" class="hidden">
+                <h3>Login de Administrador</h3>
+                <input type="text" id="adminUsername" placeholder="Usuário" required>
+                <input type="password" id="adminPassword" placeholder="Senha" required>
+                <button class="button" onclick="loginAdmin()">Entrar</button>
+            </div>
+            <div id="adminPanel" class="hidden">
+                <h3>Comentários Recebidos</h3>
+                <ul id="adminCommentsUl"></ul>
+            </div>
         </section>
     </main>
     <footer>
@@ -217,6 +239,36 @@
     </footer>
 
     <script>
+        // Função para alternar login de administrador
+        function toggleLogin() {
+            document.getElementById('adminLogin').classList.toggle('hidden');
+        }
+
+        // Função para login de administrador
+        function loginAdmin() {
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+            if (username === "admin" && password === "1234") {
+                document.getElementById('adminLogin').classList.add('hidden');
+                document.getElementById('adminPanel').classList.remove('hidden');
+                loadAdminComments();
+            } else {
+                alert("Credenciais inválidas.");
+            }
+        }
+
+        // Função para carregar comentários no dashboard administrativo
+        function loadAdminComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const adminCommentsUl = document.getElementById('adminCommentsUl');
+            adminCommentsUl.innerHTML = '';
+            comments.forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = comment;
+                adminCommentsUl.appendChild(li);
+            });
+        }
+
         // Função para atualizar status
         function updateStatus() {
             const status = document.getElementById('statusInput').value.trim();
@@ -252,17 +304,41 @@
                 alert("Por favor, digite um comentário válido.");
                 return;
             }
-            const commentsUl = document.getElementById('commentsUl');
-            const li = document.createElement('li');
-            li.textContent = comment;
-            commentsUl.appendChild(li);
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push(comment);
+            localStorage.setItem('comments', JSON.stringify(comments));
             document.getElementById('commentInput').value = '';
+            alert("Comentário enviado com sucesso!");
+            showNotification("Novo comentário recebido!");
         }
 
         // Função para simular envio de mensagem
         function sendMessage() {
             alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
         }
+
+        // Função para mostrar notificações push
+        function showNotification(message) {
+            if ("Notification" in window) {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        new Notification(message);
+                    }
+                });
+            }
+        }
+
+        // Carregar comentários ao iniciar
+        window.onload = () => {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const commentsUl = document.getElementById('commentsUl');
+            commentsUl.innerHTML = '';
+            comments.forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = comment;
+                commentsUl.appendChild(li);
+            });
+        };
     </script>
 </body>
 </html>
