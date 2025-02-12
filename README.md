@@ -163,6 +163,7 @@
     <nav>
         <a href="#files">Arquivos</a>
         <a href="#comments">Comentários</a>
+        <a href="#login">Login</a>
         <a href="#admin">Administração</a>
     </nav>
     <main>
@@ -188,11 +189,20 @@
             </div>
         </section>
 
+        <!-- Login de Usuários -->
+        <section id="login" class="form-container">
+            <h2>Login de Usuário</h2>
+            <input type="text" id="userUsername" placeholder="Usuário" required>
+            <input type="password" id="userPassword" placeholder="Senha" required>
+            <button class="button" onclick="loginUser()">Entrar</button>
+            <p>Não tem uma conta? <a href="#" onclick="registerUser()">Cadastre-se aqui</a>.</p>
+        </section>
+
         <!-- Dashboard Administrativo -->
         <section id="admin" class="admin-dashboard hidden">
             <h2>Dashboard Administrativo</h2>
             <div>
-                <button class="button" onclick="toggleLogin()">Entrar como Administrador</button>
+                <button class="button" onclick="toggleAdminLogin()">Entrar como Administrador</button>
             </div>
             <div id="adminLogin" class="hidden">
                 <h3>Login de Administrador</h3>
@@ -203,9 +213,6 @@
             <div id="adminPanel" class="hidden">
                 <h3>Gerenciar Comentários</h3>
                 <ul id="adminCommentsUl"></ul>
-                <h3>Gerenciar Arquivos</h3>
-                <input type="file" id="fileUpload" />
-                <button class="button" onclick="uploadFile()">Enviar Arquivo</button>
                 <h3>Estatísticas</h3>
                 <canvas id="statsChart" width="400" height="200"></canvas>
             </div>
@@ -217,8 +224,39 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        // Dados de usuários e administradores (simulação)
+        const users = [
+            { username: "usuario1", password: "senha123" },
+            { username: "usuario2", password: "senha456" }
+        ];
+        const admin = { username: "admin", password: "secure123" };
+
+        // Função para login de usuário
+        function loginUser() {
+            const username = document.getElementById('userUsername').value.trim();
+            const password = document.getElementById('userPassword').value.trim();
+            const user = users.find(u => u.username === username && u.password === password);
+            if (user) {
+                alert("Login bem-sucedido!");
+            } else {
+                alert("Credenciais inválidas.");
+            }
+        }
+
+        // Função para cadastro de usuário
+        function registerUser() {
+            const newUsername = prompt("Digite um nome de usuário:");
+            const newPassword = prompt("Digite uma senha:");
+            if (newUsername && newPassword) {
+                users.push({ username: newUsername, password: newPassword });
+                alert("Cadastro realizado com sucesso!");
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        }
+
         // Função para alternar login de administrador
-        function toggleLogin() {
+        function toggleAdminLogin() {
             document.getElementById('adminLogin').classList.toggle('hidden');
         }
 
@@ -226,7 +264,7 @@
         function loginAdmin() {
             const username = document.getElementById('adminUsername').value.trim();
             const password = document.getElementById('adminPassword').value.trim();
-            if (username === "admin" && password === "secure123") {
+            if (username === admin.username && password === admin.password) {
                 document.getElementById('adminLogin').classList.add('hidden');
                 document.getElementById('adminPanel').classList.remove('hidden');
                 loadAdminComments();
@@ -285,18 +323,6 @@
                 li.textContent = comment.text;
                 commentsUl.appendChild(li);
             });
-        }
-
-        // Função para upload de arquivos
-        function uploadFile() {
-            const fileInput = document.getElementById('fileUpload');
-            if (fileInput.files.length === 0) {
-                alert("Por favor, selecione um arquivo para enviar.");
-                return;
-            }
-            const fileName = fileInput.files[0].name;
-            alert(`Arquivo "${fileName}" enviado com sucesso!`);
-            fileInput.value = ''; // Limpa o campo de upload
         }
 
         // Gráfico de Estatísticas
