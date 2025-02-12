@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho de Faculdade - Braz Cubas</title>
+    <title>Trabalho Acadêmico - Braz Cubas</title>
     <style>
         /* Estilos Gerais */
         * {
@@ -18,7 +18,7 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #007bff, #0056b3);
+            background: linear-gradient(135deg, #ff6f61, #ff9e5b);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
@@ -32,7 +32,7 @@
             opacity: 0.8;
         }
         nav {
-            background-color: #0056b3;
+            background-color: #ff9e5b;
             padding: 1rem;
             text-align: center;
         }
@@ -68,14 +68,14 @@
             font-size: 1rem;
         }
         button {
-            background: #007bff;
+            background: #ff6f61;
             color: white;
             border: none;
             cursor: pointer;
             transition: background 0.3s ease;
         }
         button:hover {
-            background: #0056b3;
+            background: #ff9e5b;
         }
         table {
             width: 100%;
@@ -88,11 +88,11 @@
             border: 1px solid #ddd;
         }
         th {
-            background-color: #007bff;
+            background-color: #ff6f61;
             color: white;
         }
         td a {
-            color: #007bff;
+            color: #ff6f61;
             text-decoration: none;
             font-weight: bold;
         }
@@ -100,7 +100,7 @@
             text-decoration: underline;
         }
         footer {
-            background: #007bff;
+            background: #ff6f61;
             color: white;
             text-align: center;
             padding: 1rem;
@@ -126,11 +126,38 @@
             border: 1px solid #ddd;
             border-radius: 8px;
         }
+
+        /* Dashboard Administrativo */
+        .admin-dashboard {
+            background: white;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .admin-dashboard h2 {
+            margin-bottom: 1rem;
+        }
+        .admin-dashboard ul {
+            list-style: none;
+            padding: 0;
+        }
+        .admin-dashboard li {
+            background: #f5f5f5;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Trabalho de Faculdade - Braz Cubas</h1>
+        <h1>Trabalho Acadêmico - Braz Cubas</h1>
         <p>Soluções acadêmicas eficientes e inovadoras</p>
     </header>
     <nav>
@@ -187,7 +214,7 @@
         </section>
 
         <!-- Dashboard Administrativo -->
-        <section id="admin" class="form-container hidden">
+        <section id="admin" class="admin-dashboard hidden">
             <h2>Dashboard Administrativo</h2>
             <div>
                 <button class="button" onclick="toggleLogin()">Entrar como Administrador</button>
@@ -205,13 +232,16 @@
                 <h3>Postar Comentário Administrativo</h3>
                 <textarea id="adminCommentInput" placeholder="Digite seu comentário..." rows="5" required></textarea>
                 <button class="button" onclick="postAdminComment()">Publicar</button>
+                <h3>Estatísticas</h3>
+                <canvas id="statsChart" width="400" height="200"></canvas>
             </div>
         </section>
     </main>
     <footer>
-        <p>© 2025 Arthur Oliveira dos Santos. Todos os direitos reservados.</p>
+        <p>© 2025 Arthur. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // Função para alternar login de administrador
         function toggleLogin() {
@@ -225,6 +255,7 @@
             if (username === "admin" && password === "secure123") {
                 document.getElementById('adminLogin').classList.add('hidden');
                 document.getElementById('adminPanel').classList.remove('hidden');
+                loadStatsChart();
             } else {
                 alert("Credenciais inválidas.");
             }
@@ -284,3 +315,32 @@
             }
             const fileName = fileInput.files[0].name;
             alert(`Arquivo "${fileName}" enviado com sucesso!`);
+            fileInput.value = ''; // Limpa o campo de upload
+        }
+
+        // Gráfico de Estatísticas
+        function loadStatsChart() {
+            const ctx = document.getElementById('statsChart').getContext('2d');
+            const statsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                    datasets: [{
+                        label: 'Atividades Realizadas',
+                        data: [12, 19, 3, 15, 22],
+                        backgroundColor: ['#ff6f61', '#ff9e5b', '#ffcc00', '#6c757d', '#28a745']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
