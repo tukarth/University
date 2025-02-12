@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Logística - Sistema Completo</title>
+    <title>Trabalho de Faculdade - Braz Cubas</title>
     <style>
         /* Estilos Gerais */
         * {
@@ -148,12 +148,12 @@
 </head>
 <body>
     <header>
-        <h1>Arthur Logística</h1>
-        <p>Soluções logísticas eficientes e inovadoras</p>
+        <h1>Trabalho de Faculdade - Braz Cubas</h1>
+        <p>Soluções acadêmicas eficientes e inovadoras</p>
     </header>
     <nav>
         <a href="#status">Atualização de Status</a>
-        <a href="#reports">Relatórios</a>
+        <a href="#files">Arquivos</a>
         <a href="#comments">Comentários</a>
         <a href="#contact">Contato</a>
         <a href="#admin">Administração</a>
@@ -163,7 +163,7 @@
         <section id="status">
             <h2>Atualização de Status</h2>
             <div class="form-container">
-                <input type="text" id="statusInput" placeholder="Digite o novo status da entrega..." required>
+                <input type="text" id="statusInput" placeholder="Digite o novo status do trabalho..." required>
                 <button class="button" onclick="updateStatus()">Atualizar Status</button>
             </div>
             <div id="statusDisplay" class="form-container">
@@ -171,25 +171,16 @@
             </div>
         </section>
 
-        <!-- Relatórios Logísticos -->
-        <section id="reports">
-            <h2>Relatórios Logísticos</h2>
+        <!-- Arquivos -->
+        <section id="files">
+            <h2>Arquivos</h2>
             <div class="form-container">
-                <input type="date" id="reportDate" required>
-                <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." required>
-                <button class="button" onclick="addReport()">Adicionar Relatório</button>
+                <p>Baixe os materiais necessários:</p>
+                <ul>
+                    <li><a href="file:///C:/Users/aoliv/OneDrive/Desktop/Picking.pdf" target="_blank">Baixar PDF (Picking)</a></li>
+                    <li><a href="#" target="_blank">Baixar PowerPoint (Em breve)</a></li>
+                </ul>
             </div>
-            <table id="reportTable">
-                <thead>
-                    <tr>
-                        <th>Data</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Relatórios vão aparecer aqui -->
-                </tbody>
-            </table>
         </section>
 
         <!-- Comentários -->
@@ -199,7 +190,7 @@
                 <textarea id="commentInput" placeholder="Deixe seu comentário..." rows="5" required></textarea>
                 <button class="button" onclick="addComment()">Enviar Comentário</button>
             </div>
-            <div id="commentsList" class="form-container hidden">
+            <div id="commentsList" class="form-container">
                 <h3>Últimos Comentários</h3>
                 <ul id="commentsUl"></ul>
             </div>
@@ -217,128 +208,4 @@
         </section>
 
         <!-- Dashboard Administrativo -->
-        <section id="admin" class="admin-dashboard hidden">
-            <h2>Dashboard Administrativo</h2>
-            <div>
-                <button class="button" onclick="toggleLogin()">Entrar como Administrador</button>
-            </div>
-            <div id="adminLogin" class="hidden">
-                <h3>Login de Administrador</h3>
-                <input type="text" id="adminUsername" placeholder="Usuário" required>
-                <input type="password" id="adminPassword" placeholder="Senha" required>
-                <button class="button" onclick="loginAdmin()">Entrar</button>
-            </div>
-            <div id="adminPanel" class="hidden">
-                <h3>Comentários Recebidos</h3>
-                <ul id="adminCommentsUl"></ul>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        // Função para alternar login de administrador
-        function toggleLogin() {
-            document.getElementById('adminLogin').classList.toggle('hidden');
-        }
-
-        // Função para login de administrador
-        function loginAdmin() {
-            const username = document.getElementById('adminUsername').value.trim();
-            const password = document.getElementById('adminPassword').value.trim();
-            if (username === "admin" && password === "1234") {
-                document.getElementById('adminLogin').classList.add('hidden');
-                document.getElementById('adminPanel').classList.remove('hidden');
-                loadAdminComments();
-            } else {
-                alert("Credenciais inválidas.");
-            }
-        }
-
-        // Função para carregar comentários no dashboard administrativo
-        function loadAdminComments() {
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
-            const adminCommentsUl = document.getElementById('adminCommentsUl');
-            adminCommentsUl.innerHTML = '';
-            comments.forEach(comment => {
-                const li = document.createElement('li');
-                li.textContent = comment;
-                adminCommentsUl.appendChild(li);
-            });
-        }
-
-        // Função para atualizar status
-        function updateStatus() {
-            const status = document.getElementById('statusInput').value.trim();
-            const statusDiv = document.getElementById('statusDisplay');
-            const now = new Date().toLocaleTimeString();
-            if (status) {
-                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
-            } else {
-                alert("Por favor, digite um status válido.");
-            }
-        }
-
-        // Função para adicionar um novo relatório
-        function addReport() {
-            const reportDate = document.getElementById('reportDate').value;
-            const reportStatus = document.getElementById('reportStatus').value.trim();
-            if (!reportDate || !reportStatus) {
-                alert("Preencha todos os campos antes de adicionar um relatório.");
-                return;
-            }
-            const table = document.getElementById('reportTable').getElementsByTagName('tbody')[0];
-            const newRow = table.insertRow();
-            const dateCell = newRow.insertCell(0);
-            const statusCell = newRow.insertCell(1);
-            dateCell.textContent = reportDate;
-            statusCell.textContent = reportStatus;
-        }
-
-        // Função para adicionar comentários
-        function addComment() {
-            const comment = document.getElementById('commentInput').value.trim();
-            if (!comment) {
-                alert("Por favor, digite um comentário válido.");
-                return;
-            }
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
-            comments.push(comment);
-            localStorage.setItem('comments', JSON.stringify(comments));
-            document.getElementById('commentInput').value = '';
-            alert("Comentário enviado com sucesso!");
-            showNotification("Novo comentário recebido!");
-        }
-
-        // Função para simular envio de mensagem
-        function sendMessage() {
-            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        }
-
-        // Função para mostrar notificações push
-        function showNotification(message) {
-            if ("Notification" in window) {
-                Notification.requestPermission().then(permission => {
-                    if (permission === "granted") {
-                        new Notification(message);
-                    }
-                });
-            }
-        }
-
-        // Carregar comentários ao iniciar
-        window.onload = () => {
-            const comments = JSON.parse(localStorage.getItem('comments')) || [];
-            const commentsUl = document.getElementById('commentsUl');
-            commentsUl.innerHTML = '';
-            comments.forEach(comment => {
-                const li = document.createElement('li');
-                li.textContent = comment;
-                commentsUl.appendChild(li);
-            });
-        };
-    </script>
-</body>
-</html>
+        <section id="admin" class="admin
