@@ -209,13 +209,7 @@
 
         <!-- Seção Extra para Preencher Espaço -->
         <section id="extras" class="extra-section">
-            <h3>Informações Adicionais</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
-            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
-            <p>Proin euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Sed euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
-            <p>Nullam euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
-            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
-            <p>Proin euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Sed euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            desenvolvido.com
         </section>
     </main>
     <footer>
