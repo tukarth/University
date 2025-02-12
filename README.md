@@ -118,31 +118,13 @@
             }
         }
 
-        /* Estilos Adicionais */
-        .admin-dashboard {
-            background: #fff;
-            padding: 1.5rem;
+        /* Estilo para o visualizador de PDF */
+        .pdf-viewer {
+            width: 100%;
+            height: 500px;
             margin: 2rem auto;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            width: 90%;
-            max-width: 800px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .admin-dashboard h2 {
-            margin-bottom: 1rem;
-        }
-        .admin-dashboard ul {
-            list-style: none;
-            padding: 0;
-        }
-        .admin-dashboard li {
-            background: #f5f5f5;
-            margin: 0.5rem 0;
-            padding: 1rem;
-            border-radius: 5px;
-        }
-        .hidden {
-            display: none;
         }
     </style>
 </head>
@@ -175,11 +157,8 @@
         <section id="files">
             <h2>Arquivos</h2>
             <div class="form-container">
-                <p>Baixe os materiais necessários:</p>
-                <ul>
-                    <li><a href="file:///C:/Users/aoliv/OneDrive/Desktop/Picking.pdf" target="_blank">Baixar PDF (Picking)</a></li>
-                    <li><a href="#" target="_blank">Baixar PowerPoint (Em breve)</a></li>
-                </ul>
+                <p>Visualize ou baixe os materiais necessários:</p>
+                <iframe class="pdf-viewer" src="7cc4e623-54a0-4dbb-ac07-71584908d5a9_Picking.pdf" frameborder="0"></iframe>
             </div>
         </section>
 
@@ -208,4 +187,90 @@
         </section>
 
         <!-- Dashboard Administrativo -->
-        <section id="admin" class="admin
+        <section id="admin" class="form-container hidden">
+            <h2>Dashboard Administrativo</h2>
+            <div>
+                <button class="button" onclick="toggleLogin()">Entrar como Administrador</button>
+            </div>
+            <div id="adminLogin" class="hidden">
+                <h3>Login de Administrador</h3>
+                <input type="text" id="adminUsername" placeholder="Usuário" required>
+                <input type="password" id="adminPassword" placeholder="Senha" required>
+                <button class="button" onclick="loginAdmin()">Entrar</button>
+            </div>
+            <div id="adminPanel" class="hidden">
+                <h3>Postar Comentário Administrativo</h3>
+                <textarea id="adminCommentInput" placeholder="Digite seu comentário..." rows="5" required></textarea>
+                <button class="button" onclick="postAdminComment()">Publicar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Arthur Oliveira dos Santos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar login de administrador
+        function toggleLogin() {
+            document.getElementById('adminLogin').classList.toggle('hidden');
+        }
+
+        // Função para login de administrador
+        function loginAdmin() {
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+            if (username === "admin" && password === "1234") {
+                document.getElementById('adminLogin').classList.add('hidden');
+                document.getElementById('adminPanel').classList.remove('hidden');
+            } else {
+                alert("Credenciais inválidas.");
+            }
+        }
+
+        // Função para atualizar status
+        function updateStatus() {
+            const status = document.getElementById('statusInput').value.trim();
+            const statusDiv = document.getElementById('statusDisplay');
+            const now = new Date().toLocaleTimeString();
+            if (status) {
+                statusDiv.innerHTML = `<p>Status atualizado em: ${now} - <strong>${status}</strong></p>`;
+            } else {
+                alert("Por favor, digite um status válido.");
+            }
+        }
+
+        // Função para adicionar comentários
+        function addComment() {
+            const comment = document.getElementById('commentInput').value.trim();
+            if (!comment) {
+                alert("Por favor, digite um comentário válido.");
+                return;
+            }
+            const commentsUl = document.getElementById('commentsUl');
+            const li = document.createElement('li');
+            li.textContent = comment;
+            commentsUl.appendChild(li);
+            document.getElementById('commentInput').value = '';
+        }
+
+        // Função para postar comentários administrativos
+        function postAdminComment() {
+            const adminComment = document.getElementById('adminCommentInput').value.trim();
+            if (!adminComment) {
+                alert("Por favor, digite um comentário válido.");
+                return;
+            }
+            const commentsUl = document.getElementById('commentsUl');
+            const li = document.createElement('li');
+            li.textContent = `[ADMIN] ${adminComment}`;
+            commentsUl.appendChild(li);
+            document.getElementById('adminCommentInput').value = '';
+        }
+
+        // Função para simular envio de mensagem
+        function sendMessage() {
+            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        }
+    </script>
+</body>
+</html>
