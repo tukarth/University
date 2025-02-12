@@ -117,6 +117,24 @@
                 margin: 10px 0;
             }
         }
+
+        /* Estilos Adicionais para Preencher Espaço */
+        .extra-section {
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+        }
+        .extra-section h3 {
+            margin-bottom: 1rem;
+        }
+        .extra-section p {
+            line-height: 1.8;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +147,7 @@
         <a href="#reports">Relatórios</a>
         <a href="#comments">Comentários</a>
         <a href="#contact">Contato</a>
+        <a href="#extras">Extras</a>
     </nav>
     <main>
         <!-- Atualização de Status -->
@@ -186,6 +205,17 @@
                 <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
                 <button class="button" onclick="sendMessage()">Enviar</button>
             </div>
+        </section>
+
+        <!-- Seção Extra para Preencher Espaço -->
+        <section id="extras" class="extra-section">
+            <h3>Informações Adicionais</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            <p>Proin euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Sed euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            <p>Nullam euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
+            <p>Proin euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi. Sed euismod, nisi vel consectetur euismod, nisi nisi consectetur nisi, vel consectetur nisi nisi vel nisi.</p>
         </section>
     </main>
     <footer>
