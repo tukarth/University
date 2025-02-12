@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -162,7 +163,6 @@
     <nav>
         <a href="#files">Arquivos</a>
         <a href="#comments">Comentários</a>
-        <a href="#contact">Contato</a>
         <a href="#admin">Administração</a>
     </nav>
     <main>
@@ -180,18 +180,11 @@
             <h2>Comentários</h2>
             <div class="form-container">
                 <textarea id="commentInput" placeholder="Deixe seu comentário..." rows="5" required></textarea>
-                <button class="button" onclick="sendComment()">Enviar Comentário</button>
+                <button class="button" onclick="addComment()">Enviar Comentário</button>
             </div>
-        </section>
-
-        <!-- Contato -->
-        <section id="contact">
-            <h2>Contato</h2>
-            <div class="form-container">
-                <p>Envie-nos uma mensagem</p>
-                <input type="email" id="contactEmail" placeholder="Seu email" required>
-                <textarea id="contactMessage" placeholder="Sua mensagem..." rows="5" required></textarea>
-                <button class="button" onclick="sendContactMessage()">Enviar</button>
+            <div id="commentsList" class="form-container">
+                <h3>Últimos Comentários</h3>
+                <ul id="commentsUl"></ul>
             </div>
         </section>
 
@@ -208,6 +201,8 @@
                 <button class="button" onclick="loginAdmin()">Entrar</button>
             </div>
             <div id="adminPanel" class="hidden">
+                <h3>Gerenciar Comentários</h3>
+                <ul id="adminCommentsUl"></ul>
                 <h3>Gerenciar Arquivos</h3>
                 <input type="file" id="fileUpload" />
                 <button class="button" onclick="uploadFile()">Enviar Arquivo</button>
@@ -234,38 +229,62 @@
             if (username === "admin" && password === "secure123") {
                 document.getElementById('adminLogin').classList.add('hidden');
                 document.getElementById('adminPanel').classList.remove('hidden');
+                loadAdminComments();
                 loadStatsChart();
             } else {
                 alert("Credenciais inválidas.");
             }
         }
 
-        // Função para enviar comentários para o email
-        function sendComment() {
+        // Função para adicionar comentários
+        function addComment() {
             const comment = document.getElementById('commentInput').value.trim();
             if (!comment) {
                 alert("Por favor, digite um comentário válido.");
                 return;
             }
-            const emailBody = encodeURIComponent(`Novo comentário recebido:\n\n${comment}`);
-            window.location.href = `mailto:arthur.oliveira99@cs.brazcubas.edu.br?subject=Novo%20Comentário&body=${emailBody}`;
-            alert("Comentário enviado com sucesso!");
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments.push({ text: comment, approved: false });
+            localStorage.setItem('comments', JSON.stringify(comments));
+            alert("Comentário enviado para aprovação!");
             document.getElementById('commentInput').value = '';
         }
 
-        // Função para enviar mensagens de contato
-        function sendContactMessage() {
-            const email = document.getElementById('contactEmail').value.trim();
-            const message = document.getElementById('contactMessage').value.trim();
-            if (!email || !message) {
-                alert("Por favor, preencha todos os campos.");
-                return;
-            }
-            const emailBody = encodeURIComponent(`Nova mensagem de contato:\n\nEmail: ${email}\nMensagem: ${message}`);
-            window.location.href = `mailto:arthur.oliveira99@cs.brazcubas.edu.br?subject=Nova%20Mensagem%20de%20Contato&body=${emailBody}`;
-            alert("Mensagem enviada com sucesso!");
-            document.getElementById('contactEmail').value = '';
-            document.getElementById('contactMessage').value = '';
+        // Função para carregar comentários no dashboard administrativo
+        function loadAdminComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const adminCommentsUl = document.getElementById('adminCommentsUl');
+            adminCommentsUl.innerHTML = '';
+            comments.forEach((comment, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <p>${comment.text}</p>
+                    <button class="button" onclick="approveComment(${index})">${comment.approved ? 'Aprovado' : 'Aprovar'}</button>
+                `;
+                adminCommentsUl.appendChild(li);
+            });
+        }
+
+        // Função para aprovar comentários
+        function approveComment(index) {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            comments[index].approved = true;
+            localStorage.setItem('comments', JSON.stringify(comments));
+            loadAdminComments();
+            updatePublicComments();
+        }
+
+        // Função para atualizar comentários públicos
+        function updatePublicComments() {
+            const comments = JSON.parse(localStorage.getItem('comments')) || [];
+            const publicComments = comments.filter(comment => comment.approved);
+            const commentsUl = document.getElementById('commentsUl');
+            commentsUl.innerHTML = '';
+            publicComments.forEach(comment => {
+                const li = document.createElement('li');
+                li.textContent = comment.text;
+                commentsUl.appendChild(li);
+            });
         }
 
         // Função para upload de arquivos
@@ -303,6 +322,11 @@
                 }
             });
         }
+
+        // Carregar comentários públicos ao iniciar
+        window.onload = () => {
+            updatePublicComments();
+        };
     </script>
 </body>
 </html>
