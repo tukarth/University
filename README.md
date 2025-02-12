@@ -16,12 +16,18 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
         }
         header {
             background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
+            position: relative;
         }
         header h1 {
             font-size: 2rem;
@@ -30,6 +36,22 @@
         header p {
             font-size: 1rem;
             opacity: 0.8;
+        }
+        #toggleTheme {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: white;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        #toggleTheme:hover {
+            background: #007bff;
+            color: white;
         }
         nav {
             background-color: #0056b3;
@@ -123,6 +145,7 @@
     <header>
         <h1>Arthur Logística</h1>
         <p>Soluções logísticas eficientes e inovadoras</p>
+        <button id="toggleTheme">Modo Escuro</button>
     </header>
     <nav>
         <a href="#">Página Inicial</a>
@@ -139,6 +162,7 @@
         <div id="statusDisplay" class="form-container">
             <p>Aguardando atualização...</p>
         </div>
+
         <h2>Relatórios Logísticos</h2>
         <div class="form-container">
             <input type="date" id="reportDate" required>
@@ -156,6 +180,10 @@
                 <!-- Relatórios vão aparecer aqui -->
             </tbody>
         </table>
+
+        <h2>Estatísticas de Entregas</h2>
+        <canvas id="deliveryChart" width="400" height="200"></canvas>
+
         <h2>Contato</h2>
         <div class="form-container">
             <p>Envie-nos uma mensagem</p>
@@ -168,7 +196,15 @@
         <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+        // Função para alternar entre Modo Claro e Escuro
+        const toggleThemeButton = document.getElementById('toggleTheme');
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggleThemeButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
+        });
+
         // Função para atualizar status
         function updateStatus() {
             const status = document.getElementById('status').value.trim();
@@ -189,4 +225,45 @@
                 alert("Preencha todos os campos antes de adicionar um relatório.");
                 return;
             }
-            const table = document
+            const table = document.getElementById('reportTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            const dateCell = newRow.insertCell(0);
+            const statusCell = newRow.insertCell(1);
+            dateCell.textContent = reportDate;
+            statusCell.innerHTML = `<a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>`;
+        }
+
+        // Função para redirecionar para o site dos Correios
+        function redirectToCorreios() {
+            window.open("https://www.correios.com.br", "_blank");
+        }
+
+        // Função para simular envio de mensagem
+        function sendMessage() {
+            alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        }
+
+        // Gráfico de Estatísticas de Entregas
+        const ctx = document.getElementById('deliveryChart').getContext('2d');
+        const deliveryChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
+                datasets: [{
+                    label: 'Entregas Realizadas',
+                    data: [12, 19, 3, 15, 22],
+                    backgroundColor: ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6c757d']
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
