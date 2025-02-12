@@ -16,18 +16,12 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
         }
         header {
             background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
             text-align: center;
             padding: 2rem 1rem;
-            position: relative;
         }
         header h1 {
             font-size: 2rem;
@@ -36,22 +30,6 @@
         header p {
             font-size: 1rem;
             opacity: 0.8;
-        }
-        #toggleTheme {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            padding: 0.5rem 1rem;
-            background: white;
-            color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        #toggleTheme:hover {
-            background: #007bff;
-            color: white;
         }
         nav {
             background-color: #0056b3;
@@ -145,69 +123,79 @@
     <header>
         <h1>Arthur Logística</h1>
         <p>Soluções logísticas eficientes e inovadoras</p>
-        <button id="toggleTheme">Modo Escuro</button>
     </header>
     <nav>
-        <a href="#">Página Inicial</a>
-        <a href="#">Serviços</a>
-        <a href="#" onclick="redirectToCorreios()">Correios</a>
-        <a href="#">Contato</a>
+        <a href="#status">Atualização de Status</a>
+        <a href="#reports">Relatórios</a>
+        <a href="#comments">Comentários</a>
+        <a href="#contact">Contato</a>
     </nav>
     <main>
-        <h2>Atualização de Status</h2>
-        <div class="form-container">
-            <input type="text" id="status" placeholder="Digite o novo status da entrega..." required>
-            <button class="button" onclick="updateStatus()">Atualizar Status</button>
-        </div>
-        <div id="statusDisplay" class="form-container">
-            <p>Aguardando atualização...</p>
-        </div>
+        <!-- Atualização de Status -->
+        <section id="status">
+            <h2>Atualização de Status</h2>
+            <div class="form-container">
+                <input type="text" id="statusInput" placeholder="Digite o novo status da entrega..." required>
+                <button class="button" onclick="updateStatus()">Atualizar Status</button>
+            </div>
+            <div id="statusDisplay" class="form-container">
+                <p>Aguardando atualização...</p>
+            </div>
+        </section>
 
-        <h2>Relatórios Logísticos</h2>
-        <div class="form-container">
-            <input type="date" id="reportDate" required>
-            <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." required>
-            <button class="button" onclick="addReport()">Adicionar Relatório</button>
-        </div>
-        <table id="reportTable">
-            <thead>
-                <tr>
-                    <th>Data</th>
-                    <th>Status (clique para detalhes)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Relatórios vão aparecer aqui -->
-            </tbody>
-        </table>
+        <!-- Relatórios Logísticos -->
+        <section id="reports">
+            <h2>Relatórios Logísticos</h2>
+            <div class="form-container">
+                <input type="date" id="reportDate" required>
+                <input type="text" id="reportStatus" placeholder="Informe o status do relatório..." required>
+                <button class="button" onclick="addReport()">Adicionar Relatório</button>
+            </div>
+            <table id="reportTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Relatórios vão aparecer aqui -->
+                </tbody>
+            </table>
+        </section>
 
-        <h2>Estatísticas de Entregas</h2>
-        <canvas id="deliveryChart" width="400" height="200"></canvas>
+        <!-- Comentários -->
+        <section id="comments">
+            <h2>Comentários</h2>
+            <div class="form-container">
+                <textarea id="commentInput" placeholder="Deixe seu comentário..." rows="5" required></textarea>
+                <button class="button" onclick="addComment()">Enviar Comentário</button>
+            </div>
+            <div id="commentsList" class="form-container">
+                <h3>Últimos Comentários</h3>
+                <ul id="commentsUl"></ul>
+            </div>
+        </section>
 
-        <h2>Contato</h2>
-        <div class="form-container">
-            <p>Envie-nos uma mensagem</p>
-            <input type="email" placeholder="Seu email" required>
-            <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
-            <button class="button" onclick="sendMessage()">Enviar</button>
-        </div>
+        <!-- Contato -->
+        <section id="contact">
+            <h2>Contato</h2>
+            <div class="form-container">
+                <p>Envie-nos uma mensagem</p>
+                <input type="email" placeholder="Seu email" required>
+                <textarea placeholder="Sua mensagem..." rows="5" required></textarea>
+                <button class="button" onclick="sendMessage()">Enviar</button>
+            </div>
+        </section>
     </main>
     <footer>
         <p>© 2025 Arthur Logística. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Função para alternar entre Modo Claro e Escuro
-        const toggleThemeButton = document.getElementById('toggleTheme');
-        toggleThemeButton.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggleThemeButton.textContent = document.body.classList.contains('dark-mode') ? 'Modo Claro' : 'Modo Escuro';
-        });
-
         // Função para atualizar status
         function updateStatus() {
-            const status = document.getElementById('status').value.trim();
+            const status = document.getElementById('statusInput').value.trim();
             const statusDiv = document.getElementById('statusDisplay');
             const now = new Date().toLocaleTimeString();
             if (status) {
@@ -230,40 +218,27 @@
             const dateCell = newRow.insertCell(0);
             const statusCell = newRow.insertCell(1);
             dateCell.textContent = reportDate;
-            statusCell.innerHTML = `<a href="https://www.correios.com.br" target="_blank">${reportStatus}</a>`;
+            statusCell.textContent = reportStatus;
         }
 
-        // Função para redirecionar para o site dos Correios
-        function redirectToCorreios() {
-            window.open("https://www.correios.com.br", "_blank");
+        // Função para adicionar comentários
+        function addComment() {
+            const comment = document.getElementById('commentInput').value.trim();
+            if (!comment) {
+                alert("Por favor, digite um comentário válido.");
+                return;
+            }
+            const commentsUl = document.getElementById('commentsUl');
+            const li = document.createElement('li');
+            li.textContent = comment;
+            commentsUl.appendChild(li);
+            document.getElementById('commentInput').value = '';
         }
 
         // Função para simular envio de mensagem
         function sendMessage() {
             alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
         }
-
-        // Gráfico de Estatísticas de Entregas
-        const ctx = document.getElementById('deliveryChart').getContext('2d');
-        const deliveryChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'],
-                datasets: [{
-                    label: 'Entregas Realizadas',
-                    data: [12, 19, 3, 15, 22],
-                    backgroundColor: ['#007bff', '#28a745', '#dc3545', '#ffc107', '#6c757d']
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    }
-                }
-            }
-        });
     </script>
 </body>
 </html>
