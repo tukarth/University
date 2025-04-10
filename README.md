@@ -97,7 +97,7 @@
 
   <section>
     <h2>Sobre </h2>
-    <p> para teste </p>
+    <p> Para teste </p>
 
     <h2>Faculdade</h2>
     <p>A Universidade Brás Cubas oferece uma formação sólida na área de Logística, com foco em práticas reais de mercado, professores qualificados e estrutura voltada para o desenvolvimento profissional dos alunos.</p>
