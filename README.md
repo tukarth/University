@@ -90,7 +90,6 @@
       to { opacity: 1; }
     }
   </style>
-</head>
 <body>
   <header>
     
