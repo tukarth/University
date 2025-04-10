@@ -128,7 +128,6 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor√
   </style>
 </head>
 <body>
-  <h1>Bem-vindo ao meu site!</h1>
-  <p>Este √© um exemplo com fundo preto.</p>
+  
 </body>
 </html>
