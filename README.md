@@ -93,7 +93,7 @@
     
 
   <section>
-    <h2>Sobre </h2>
+    <h2>Conectando ideias, construindo futuros.</h2>
     <p> Este site foi desenvolvido com o objetivo de apresentar projetos acadêmicos elaborados no contexto do curso de Logística da Universidade Brás Cubas (UBC). A proposta é fornecer uma plataforma simples, visual e acessível onde alunos, professores e interessados possam visualizar os conteúdos produzidos, acompanhar as soluções propostas e compreender os objetivos de cada trabalho.
 
 Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, reforçando o compromisso com a aprendizagem prática, a inovação e o desenvolvimento de competências essenciais no campo da logística. </p>
