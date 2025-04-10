@@ -115,5 +115,3 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor√
   <footer>
     &copy; 2025 @tukarth - Todos os direitos reservados.
   </footer>
-</body>
-</html>
