@@ -103,7 +103,7 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor�
       <div class="buttons">
       <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q " target="_blank">🔗 Acessar Projeto: Itinerário extensionista 2024 </a>    
   <div class="buttons">
-      <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=dFecCP">🔗 Acessar Projeto: Picking 2024 </a>
+      <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx">🔗 Acessar Projeto: Picking 2024 </a>
   
       <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato </a>
     </div>
