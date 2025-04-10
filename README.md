@@ -91,7 +91,6 @@
   </style>
 <body>
     
-  </header>
 
   <section>
     <h2>Sobre </h2>
