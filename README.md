@@ -1,6 +1,5 @@
 
 <html lang="pt-BR">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -107,12 +106,12 @@
     <div class="buttons">
       <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">🔗 Acessar Projeto no Canva</a>
   
-      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 contato </a>
+      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato </a>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Projeto Acadêmico - Todos os direitos reservados.
+    &copy; 2025 @tukarth - Todos os direitos reservados.
   </footer>
 </body>
 </html>
