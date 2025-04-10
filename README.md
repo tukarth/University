@@ -111,7 +111,6 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, reforÃ
   
       <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">ğŸ“§ Contato </a>
     </div>
-  </section>
 
   <footer>
     &copy; 2025 @tukarth - Todos os direitos reservados.
