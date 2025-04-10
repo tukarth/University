@@ -97,7 +97,9 @@
 
   <section>
     <h2>Sobre </h2>
-    <p> Para teste </p>
+    <p> Este site foi desenvolvido com o objetivo de apresentar projetos acadêmicos elaborados no contexto do curso de Logística da Universidade Brás Cubas (UBC). A proposta é fornecer uma plataforma simples, visual e acessível onde alunos, professores e interessados possam visualizar os conteúdos produzidos, acompanhar as soluções propostas e compreender os objetivos de cada trabalho.
+
+Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, reforçando o compromisso com a aprendizagem prática, a inovação e o desenvolvimento de competências essenciais no campo da logística. </p>
 
     <h2>Faculdade</h2>
     <p>A Universidade Brás Cubas oferece uma formação sólida na área de Logística, com foco em práticas reais de mercado, professores qualificados e estrutura voltada para o desenvolvimento profissional dos alunos.</p>
