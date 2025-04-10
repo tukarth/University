@@ -103,7 +103,6 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor�
 
     <h2>Faculdade</h2>
     <p>A Universidade Brás Cubas oferece uma formação sólida na área de Logística, com foco em práticas reais de mercado, professores qualificados e estrutura voltada para o desenvolvimento profissional dos alunos.</p>
-
     <div class="buttons">
       <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton " target="_blank">🔗 Acessar Projeto: Relações Trabalhistas </a>
       <div class="buttons">
