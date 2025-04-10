@@ -113,7 +113,6 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor√
   <footer>
     &copy; 2025 @tukarth - Todos os direitos reservados.
   </footer>
-  <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
