@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apresentação do Projeto</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -94,7 +94,7 @@
 </head>
 <body>
   <header>
-    <h1>Projeto Acadêmico - UBC Logística</h1>
+    
   </header>
 
   <section>
@@ -106,8 +106,8 @@
 
     <div class="buttons">
       <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">🔗 Acessar Projeto no Canva</a>
-      <a href="#">🔐 Login</a>
-      <a href="mailto:contato@projeto.com">📧 contato@projeto.com</a>
+  
+      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 contato@projeto.com</a>
     </div>
   </section>
 
