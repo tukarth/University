@@ -113,3 +113,22 @@ Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, refor√
   <footer>
     &copy; 2025 @tukarth - Todos os direitos reservados.
   </footer>
+  <!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site com Fundo Preto</title>
+  <style>
+    body {
+      background-color: black; /* Define a cor do fundo como preto */
+      color: white; /* Define a cor do texto como branco para contraste */
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo ao meu site!</h1>
+  <p>Este √© um exemplo com fundo preto.</p>
+</body>
+</html>
