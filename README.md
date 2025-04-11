@@ -94,9 +94,9 @@
 
   <section>
     <h2>Conectando ideias, construindo futuros.</h2>
-    <p> Este site foi desenvolvido com o objetivo de apresentar projetos acadêmicos elaborados no contexto do curso de Logística da Universidade Brás Cubas (UBC). A proposta é fornecer uma plataforma simples, visual e acessível onde alunos, professores e interessados possam visualizar os conteúdos produzidos, acompanhar as soluções propostas e compreender os objetivos de cada trabalho.
+    <p> Este site apresenta os projetos dos alunos de Logística da Universidade Brás Cubas (UBC), em um espaço simples, visual e fácil de navegar. A proposta é compartilhar soluções criativas, ideias práticas e mostrar como a logística faz a diferença no dia a dia.
 
-Trata-se de uma ferramenta voltada exclusivamente para fins educacionais, reforçando o compromisso com a aprendizagem prática, a inovação e o desenvolvimento de competências essenciais no campo da logística. </p>
+E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiência aqui é segura, limpa e focada no que realmente importa — o conhecimento. </p>
 
     <div class="buttons">
       <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton " target="_blank">🔗 Acessar Projeto: Relações Trabalhistas 2025 </a>
