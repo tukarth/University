@@ -125,4 +125,3 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
   </style>
 </head>
 <body>
-<img src="https://img.icons8.com/?size=100&id=etRqsBHtSyMZ&format=png&color=000000" alt="Ícone caminhão" style="width: 100px;">
