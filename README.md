@@ -128,3 +128,8 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
   
 </body>
 </html>
+© 2025 University  
+• Todos os direitos reservados  
+• <a href="#projetos">Projetos</a>  
+• <a href="#contato">Contato</a>  
+• <a href="#privacidade">Política de Privacidade</a>
