@@ -124,4 +124,12 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
     }
   </style>
 </head>
-<body>
+<body><div class="carousel">
+  <div class="slides">
+    <img src="imagem1.jpg" alt="Imagem 1">
+    <img src="imagem2.jpg" alt="Imagem 2">
+    <img src="imagem3.jpg" alt="Imagem 3">
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
