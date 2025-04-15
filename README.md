@@ -1,7 +1,7 @@
 <html lang="pt-BR">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <section id="galeria" style="text-align:center; margin-top:50px;">
-  <h2>Galeria de Fotos</h2>
+  <h2>Fotos</h2>
   <div class="carousel">
     <img src="imagem1.jpg" alt="Foto 1" class="slide" style="display:block;">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
