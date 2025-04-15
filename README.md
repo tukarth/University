@@ -1,6 +1,16 @@
 <html lang="pt-BR">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <section id="galeria" style="text-align:center; margin-top:50px;">
+  <h2>Galeria de Fotos</h2>
+  <div class="carousel">
+    <img src="imagem1.jpg" alt="Foto 1" class="slide" style="display:block;">
+    <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
+    <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
+    <br>
+    <button onclick="mudarSlide(-1)">Anterior</button>
+    <button onclick="mudarSlide(1)">Próximo</button>
+  </div>
+</section>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style> 
@@ -124,12 +134,4 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
     }
   </style>
 </head>
-<body><div class="carousel">
-  <div class="slides">
-    <img src="imagem1.jpg" alt="Imagem 1">
-    <img src="imagem2.jpg" alt="Imagem 2">
-    <img src="imagem3.jpg" alt="Imagem 3">
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
+<body>
