@@ -1,6 +1,6 @@
   <h2>Fotos</h2>
   <div class="carousel">
-    <img src="imagem">
+    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 16.17.55_0ef8c262.jpg">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
     <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
     <br>
