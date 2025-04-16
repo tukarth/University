@@ -124,7 +124,8 @@
     </footer>
   </body>
 </html> <head>
-  <style>
+  <style> 
+    
     body {
       background-color: #000; /* Fundo preto puro */
       color: #fff;
