@@ -123,5 +123,15 @@
      @tukarth - Todos os direitos reservados. &copy; 2025
     </footer>
  
-
+ <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+        overflow-x: hidden;
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </body>
+</html>
 
