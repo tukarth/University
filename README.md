@@ -126,11 +126,11 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   </head>
   
-  </body>
+
 </html>
 
   <footer>
-    &copy; 2025 @tukarth - Todos os direitos reservados.
+   @tukarth - Todos os direitos reservados. &copy; 2025
   </footer>
 <html lang="pt">
 <head>
