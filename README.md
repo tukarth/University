@@ -103,7 +103,7 @@
         E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiência aqui é segura, limpa e focada no que realmente importa — o conhecimento.
       </p>
 
-      <div class="buttons"> https://www.canva.com/design/DAGj9cOxSdM/EAkiOozrDgsVoWJyQSvxLg/watch?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1dfb212e5c🔗 Projeto: Relações Trabalhistas 2025</a>
+      <div class="buttons">"https://www.canva.com/design/DAGj9cOxSdM/EAkiOozrDgsVoWJyQSvxLg/watch?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1dfb212e5c" 🔗 Projeto: Relações Trabalhistas 2025</a>
         <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q" target="_blank">🔗 Projeto: Itinerário extensionista 2024</a>    
         <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx" target="_blank">🔗 Projeto: Picking 2024</a>
         <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
