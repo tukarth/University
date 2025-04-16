@@ -116,8 +116,28 @@
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
     <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
     <br>
-    <button onclick="mudarSlide(-1)">Anterior</button>
-    <button onclick="mudarSlide(1)">Próximo</button>
+    <style>
+  .botao-slide {
+    padding: 8px 16px;
+    margin: 10px 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .botao-slide:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+</style>
+
+<button class="botao-slide" onclick="mudarSlide(-1)">Anterior</button>
+<button class="botao-slide" onclick="mudarSlide(1)">Próximo</button>
+
   </div>
   
 
