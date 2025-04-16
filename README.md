@@ -148,8 +148,8 @@
   <section id="galeria" style="text-align:center; margin-top:50px;">
     <h2>Fotos</h2>
     <div class="carousel">
-      <img src="imagem" alt="Foto 1" class="slide" style="display:block;">
-      <img src="imagem" alt="Foto 2" class="slide" style="display:none;">
+      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide" style="display:block;">
+      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide" style="display:none;">
       <img src="imagem" alt="Foto 3" class="slide" style="display:none;">
       <br>
       <button onclick="mudarSlide(-1)">Anterior</button>
