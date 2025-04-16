@@ -117,7 +117,7 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
   
       <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato </a>
     </div>
-<!DOCTYPE html>
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -127,10 +127,7 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
   </head>
   <body>
 
-    <!-- Seu conteúdo aqui -->
-
-    <!-- Coloque o CSS AQUI no final, dentro da tag <style> -->
-    <style>
+    >
       body {
         background-color: #000;
         color: #fff;
