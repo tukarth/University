@@ -110,7 +110,7 @@
         <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
          </div>
     </section>
-    <h2> </h2>
+    <h2> O Time Que Tornou Tudo Possível</h2>
   <div class="carousel">
     <img src="Imagem do WhatsApp de 2025-04-16 à(s) 16.17.55_0ef8c262.jpg">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
