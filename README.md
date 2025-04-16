@@ -1,7 +1,6 @@
   <h2>Fotos</h2>
   <div class="carousel">
-    <img src="![SXUG0805](https://github.com/user-attachments/assets/66e037da-d011-4e19-a163-d8c5347024dd)
-" alt="Foto 1" class="slide" style="display:block;">
+    <img src="C:\Users\aoliv\OneDrive\Pictures\rio\SXUG0805.JPG"display:block;">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
     <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
     <br>
