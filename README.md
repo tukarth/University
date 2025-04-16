@@ -117,6 +117,30 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
   
       <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato </a>
     </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- Seu conteúdo aqui -->
+
+    <!-- Coloque o CSS AQUI no final, dentro da tag <style> -->
+    <style>
+      body {
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
+        overflow-x: hidden;
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  </body>
+</html>
 
   <footer>
     &copy; 2025 @tukarth - Todos os direitos reservados.
