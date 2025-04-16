@@ -104,7 +104,7 @@
       </p>
 
       <div class="buttons">
-        <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">🔗 Projeto: Relações Trabalhistas 2025</a>
+        <a href="file:///C:/Users/aoliv/OneDrive/Desktop/Seja%20bem-vindo%20a%20%C3%93CO%20FRIENDLY.pdf🔗 Projeto: Relações Trabalhistas 2025</a>
         <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q" target="_blank">🔗 Projeto: Itinerário extensionista 2024</a>    
         <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx" target="_blank">🔗 Projeto: Picking 2024</a>
         <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
