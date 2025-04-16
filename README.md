@@ -125,17 +125,7 @@ E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiê
     <title>Meu Site</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-
-    >
-      body {
-        background-color: #000;
-        color: #fff;
-        line-height: 1.6;
-        overflow-x: hidden;
-        font-family: 'Poppins', sans-serif;
-      }
-    </style>
+  
   </body>
 </html>
 
