@@ -118,12 +118,7 @@
         <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
          </div>
     </section>
-
-    <footer>
-     @tukarth - Todos os direitos reservados. &copy; 2025
-    </footer>
- 
- <style>
+     <style>
       body {
         background-color: #000;
         color: #fff;
@@ -134,4 +129,10 @@
     </style>
   </body>
 </html>
+
+    <footer>
+     @tukarth - Todos os direitos reservados. &copy; 2025
+    </footer>
+ 
+
 
