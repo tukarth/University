@@ -132,7 +132,7 @@
     </p>
 
     <div class="buttons">
-      <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
+      <a href="Seja bem-vindo a ÓCO FRIENDLY.pdf">
         🔗 Projeto: Relações Trabalhistas 2025
       </a>
       <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q" target="_blank">
