@@ -1,20 +1,12 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <section id="galeria" style="text-align:center; margin-top:50px;">
-  <h2>Fotos</h2>
-  <div class="carousel">
-    <img src="imagem1.jpg" alt="Foto 1" class="slide" style="display:block;">
-    <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
-    <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
-    <br>
-    <button onclick="mudarSlide(-1)">Anterior</button>
-    <button onclick="mudarSlide(1)">Próximo</button>
-  </div>
-</section>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site com Fundo Preto</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style> 
-    
+  <style>
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -22,7 +14,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background-color: #000;
       color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
@@ -71,7 +63,8 @@
       text-decoration: none;
       color: #fff;
       background: #1abc9c;
-      padding: 15px;
+      padding: 10px 15px;
+      font-size: 13px; /* DIMINUI O TAMANHO AQUI */
       text-align: center;
       border-radius: 10px;
       transition: background 0.3s ease;
@@ -98,53 +91,88 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
-  </style>
-<body>
-    
 
-  <section>
-   <h2> Conectando ideias, construindo futuros. <h2>
-    <p> Este site apresenta os projetos dos alunos de Logística da Universidade Brás Cubas (UBC), em um espaço simples, visual e fácil de navegar. A proposta é compartilhar soluções criativas, ideias práticas e mostrar como a logística faz a diferença no dia a dia.
+    /* Estilos da galeria */
+    .carousel img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
 
-E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiência aqui é segura, limpa e focada no que realmente importa — o conhecimento. </p>
+    .carousel button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1abc9c;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-    <div class="buttons">
-      <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton " target="_blank">🔗 Projeto: Relações Trabalhistas 2025 </a>
-      <div class="buttons">
-      <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q " target="_blank">🔗 Projeto: Itinerário extensionista 2024 </a>    
-  <div class="buttons">
-      <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx">🔗 Projeto: Picking 2024 </a>
-  
-      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato </a>
-    </div>
-
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Site</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  </head>
-  
-
-</html>
-
-  <footer>
-   @tukarth - Todos os direitos reservados. &copy; 2025
-  </footer>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site com Fundo Preto</title>
-  <style>
-    body {
-      background-color: black; /* Define a cor do fundo como preto */
-      color: white; /* Define a cor do texto como branco para contraste */
-      font-family: Arial, sans-serif;
+    .carousel button:hover {
+      background-color: #16a085;
     }
   </style>
 </head>
 <body>
+
+  <section>
+    <h2>Conectando ideias, construindo futuros.</h2>
+    <p>
+      Este site apresenta os projetos dos alunos de Logística da Universidade Brás Cubas (UBC),
+      em um espaço simples, visual e fácil de navegar. A proposta é compartilhar soluções criativas,
+      ideias práticas e mostrar como a logística faz a diferença no dia a dia.
+    </p>
+    <p>
+      E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiência aqui é segura,
+      limpa e focada no que realmente importa — o conhecimento.
+    </p>
+
+    <div class="buttons">
+      <a href="https://www.canva.com/design/DAGj9cOxSdM/o39bmt-oWF2PpPDNlvTjmw/edit?utm_content=DAGj9cOxSdM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
+        🔗 Projeto: Relações Trabalhistas 2025
+      </a>
+      <a href="https://1drv.ms/p/c/bde93b9cab5058a5/EXKphmh1l3hBtThDMfpyj9ABnC_qHzkpojPY6OSEJxHhcg?e=38ZW9Q" target="_blank">
+        🔗 Projeto: Itinerário Extensionista 2024
+      </a>
+      <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx" target="_blank">
+        🔗 Projeto: Picking 2024
+      </a>
+      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
+    </div>
+  </section>
+
+  <section id="galeria" style="text-align:center; margin-top:50px;">
+    <h2>Fotos</h2>
+    <div class="carousel">
+      <img src="imagem1.jpg" alt="Foto 1" class="slide" style="display:block;">
+      <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
+      <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
+      <br>
+      <button onclick="mudarSlide(-1)">Anterior</button>
+      <button onclick="mudarSlide(1)">Próximo</button>
+    </div>
+  </section>
+
+  <footer>
+   @tukarth - Todos os direitos reservados. &copy; 2025
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function mudarSlide(n) {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
 
 
