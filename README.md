@@ -1,6 +1,6 @@
   <h2>Fotos</h2>
   <div class="carousel">
-    <img src="">
+    <img src="imagem">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
     <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
     <br>
