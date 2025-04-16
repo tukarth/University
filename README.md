@@ -148,9 +148,9 @@
   <section id="galeria" style="text-align:center; margin-top:50px;">
     <h2>Fotos</h2>
     <div class="carousel">
-      <img src="imagem1.jpg" alt="Foto 1" class="slide" style="display:block;">
-      <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
-      <img src="imagem3.jpg" alt="Foto 3" class="slide" style="display:none;">
+      <img src="imagem" alt="Foto 1" class="slide" style="display:block;">
+      <img src="imagem" alt="Foto 2" class="slide" style="display:none;">
+      <img src="imagem" alt="Foto 3" class="slide" style="display:none;">
       <br>
       <button onclick="mudarSlide(-1)">Anterior</button>
       <button onclick="mudarSlide(1)">Próximo</button>
