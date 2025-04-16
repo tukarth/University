@@ -110,7 +110,7 @@
         <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
          </div>
     </section>
-    <h2> O Time Que Tornou Tudo Possível</h2>
+    <h2> </h2>
   <div class="carousel">
     <img src="">
     <img src="imagem2.jpg" alt="Foto 2" class="slide" style="display:none;">
