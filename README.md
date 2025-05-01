@@ -133,7 +133,7 @@
 
     <div class="buttons">
       <a href="https://1drv.ms/x/c/de9e79f6174a4628/EcIMFjsSULFIhb2Ekbq4DtYBDgcJTIHZjPllqgpDBiSDCg?e=CLBv7D">
-        🔗 Projeto: ODS 2025 Pesquisa
+        🔗 Projeto: ODS6 Pesquisa 2025
       </a>
     <div class="buttons">
       <a href="Seja bem-vindo a ÓCO FRIENDLY.pdf">
