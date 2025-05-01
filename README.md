@@ -132,10 +132,9 @@
     </p>
 
     <div class="buttons">
-      <a href="https://docs.google.com/spreadsheets/d/1OyhmZtr07wW2z06Yoe_9FE1DMXXHck01g3lXL-IxHoI/edit?resourcekey=&gid=356350836#gid=356350836">
+      <a href="https://1drv.ms/x/c/de9e79f6174a4628/EcIMFjsSULFIhb2Ekbq4DtYBDgcJTIHZjPllqgpDBiSDCg?e=CLBv7D">
         🔗 Projeto: ODS 2025
       </a>
-
 
 
     <div class="buttons">
