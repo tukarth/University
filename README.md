@@ -135,8 +135,6 @@
       <a href="https://1drv.ms/x/c/de9e79f6174a4628/EcIMFjsSULFIhb2Ekbq4DtYBDgcJTIHZjPllqgpDBiSDCg?e=CLBv7D">
         🔗 Projeto: ODS 2025
       </a>
-
-
     <div class="buttons">
       <a href="Seja bem-vindo a ÓCO FRIENDLY.pdf">
         🔗 Projeto: Relações Trabalhistas 2025
@@ -149,7 +147,7 @@
       </a>
       <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
     </div>
-  </section>
+
 
   <section id="galeria" style="text-align:center; margin-top:50px;">
     <h2>Galeria</h2>
@@ -178,7 +176,5 @@
     }
   </script>
 
-</body>
-</html>
 
 
