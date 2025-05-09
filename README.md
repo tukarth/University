@@ -127,8 +127,8 @@
       ideias práticas e mostrar como a logística faz a diferença no dia a dia.
     </p>
     <p>
-      E pode ficar tranquilo: não coletamos dados nem usamos rastreamento. A experiência aqui é segura,
-      limpa e focada no que realmente importa — o conhecimento.
+      🔒 Sem rastreamento, sem complicação. Só conhecimento de qualidade!
+
     </p>
 
     <div class="buttons">
