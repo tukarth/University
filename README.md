@@ -157,9 +157,7 @@
     <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
     <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
     <br>
-    <button onclick="mudarSlide(-1)">Anterior</button>
-    <button onclick="mudarSlide(1)">Próximo</button>
-</div>
+    
 
 <script>
     let slides = document.querySelectorAll(".slide");
