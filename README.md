@@ -151,14 +151,39 @@
 
   <section id="galeria" style="text-align:center; margin-top:50px;">
     <h2>Galeria</h2>
-    <div class="slideshow">
-      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide" style="display:block;">
-      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide" style="display:none;">
-      <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide" style="display:none;">
-      <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide" style="display:none;">
-      <br>
-      <button onclick="mudarSlide(-1)">Anterior</button>
-      <button onclick="mudarSlide(1)">Próximo</button>
+   <div class="slideshow">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
+    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
+    <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    <br>
+    <button onclick="mudarSlide(-1)">Anterior</button>
+    <button onclick="mudarSlide(1)">Próximo</button>
+</div>
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function mudarSlide(step) {
+        index = (index + step + slides.length) % slides.length;
+        showSlide();
+    }
+
+    function autoSlide() {
+        index = (index + 1) % slides.length;
+        showSlide();
+    }
+
+    setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
+    showSlide(); // Exibe a primeira imagem
+</script>
     </div>
   </section>
 
