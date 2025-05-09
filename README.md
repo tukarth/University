@@ -127,7 +127,7 @@
       ideias práticas e mostrar como a logística faz a diferença no dia a dia.
     </p>
     <p>
-      🔒 Sem rastreamento, sem complicação. Só conhecimento de qualidade!
+      🔒 Sem rastreamento, sem complicação.
 
     </p>
 
