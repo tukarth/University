@@ -1,4 +1,5 @@
-
+<div id="clever-5997-131374-sticky-footer" style="cursor: pointer; position: fixed; display: flex; width: 100%; bottom: 0px; z-index: 100000; transition: 1s; left: 0px; background-color: black; color: white; padding: 10px;">
+</div>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -200,7 +201,3 @@
       slides[slideIndex].style.display = "block";
     }
   </script>
-
-<div id="clever-5997-131374-sticky-footer" style="cursor: pointer; position: fixed; display: flex; width: 100%; bottom: 0px; z-index: 100000; transition: 1s; left: 0px;">
-</div>
-
