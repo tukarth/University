@@ -16,17 +16,7 @@
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
-<div class="chatbox" style="display: none;" id="mensagem">
-  <div class="message bot">
-    Olá! Este site ainda está em construção. Volte em breve!
-  </div>
-</div>
 
-<script>
-  setTimeout(() => {
-    document.getElementById('mensagem').style.display = 'block';
-  }, 3000); // 2 segundos
-</script>
     body {
       background-color: #000;
       color: #fff;
