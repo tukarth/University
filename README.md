@@ -132,6 +132,8 @@
     </p>
     <p>
       🔒 Sem rastreamento, sem complicação.
+Estamos aprimorando a experiência do site e melhorando algumas funcionalidades. Algumas ainda estão limitadas enquanto realizamos ajustes e implementamos novos recursos.
+Última atualização: 11/05/2025
 
     </p>
 
