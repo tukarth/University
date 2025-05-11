@@ -2,6 +2,10 @@
     <a href="#" style="color: white; margin: 10px;">Register</a> |
     <a href="#" style="color: white; margin: 10px;">Sign in</a> |
     <a href="#" style="color: white; margin: 10px;">Entrar no Painel</a>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+<script src="firebase-config.js"></script>
+
 </div>
 <html lang="pt-BR">
 <head>
