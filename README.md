@@ -3,7 +3,6 @@
     <a href="#" style="color: white; margin: 10px;">Sign in</a> |
     <a href="#" style="color: white; margin: 10px;">Entrar no Painel</a>
 </div>
-</div>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
