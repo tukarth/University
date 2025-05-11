@@ -2,9 +2,27 @@
     <a href="#" style="color: white; margin: 10px;">Register</a> |
     <a href="#" style="color: white; margin: 10px;">Sign in</a> |
     <a href="#" style="color: white; margin: 10px;">Entrar no Painel</a>
-    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
-<script src="firebase-config.js"></script>
+    <// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCN2YMTCXBgNGdLjrkE2uiKOpm9Dz4LQis",
+  authDomain: "university-ef1ef.firebaseapp.com",
+  projectId: "university-ef1ef",
+  storageBucket: "university-ef1ef.firebasestorage.app",
+  messagingSenderId: "25499939272",
+  appId: "1:25499939272:web:3438a886a1c64fd33010fd",
+  measurementId: "G-56T3TRNCT1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 </div>
 <html lang="pt-BR">
