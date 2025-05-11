@@ -201,5 +201,6 @@
     }
   </script>
 
-
+<div id="clever-5997-131374-sticky-footer" style="cursor: pointer; position: fixed; display: flex; width: 100%; bottom: 0px; z-index: 100000; transition: 1s; left: 0px;">
+</div>
 
