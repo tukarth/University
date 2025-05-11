@@ -1,4 +1,7 @@
-<div id="clever-5997-131374-sticky-footer" style="cursor: pointer; position: fixed; display: flex; width: 100%; bottom: 0px; z-index: 100000; transition: 1s; left: 0px; background-color: black; color: white; padding: 10px;">
+<div style="background-color: black; padding: 10px; text-align: center;">
+    <a href="#" style="color: white; margin: 10px;">Register</a> |
+    <a href="#" style="color: white; margin: 10px;">Sign in</a> |
+    <a href="#" style="color: white; margin: 10px;">Choose station</a>
 </div>
 <html lang="pt-BR">
 <head>
