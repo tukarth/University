@@ -1,7 +1,8 @@
-<div style="background-color: black; padding: 10px; text-align: center;">
-    <a href="#" style="color: white; margin: 10px;">Register</a> |
-    <a href="#" style="color: white; margin: 10px;">Sign in</a> |
-    <a href="#" style="color: white; margin: 10px;">Choose station</a>
+<div style="background-color: black; padding: 20px; text-align: center; border-radius: 8px;">
+    <button style="background-color: #007bff; color: white; border: none; padding: 10px 20px; margin: 10px; cursor: pointer; border-radius: 5px;">Registrar</button>
+    <button style="background-color: #28a745; color: white; border: none; padding: 10px 20px; margin: 10px; cursor: pointer; border-radius: 5px;">Entrar</button>
+    <button style="background-color: #ffc107; color: black; border: none; padding: 10px 20px; margin: 10px; cursor: pointer; border-radius: 5px;">Escolher estação</button>
+</div>
 </div>
 <html lang="pt-BR">
 <head>
