@@ -1,11 +1,13 @@
-const firebaseConfig = {
-    apiKey: "SUA_API_KEY",
-    authDomain: "SEU_DOMINIO.firebaseapp.com",
-    projectId: "SEU_PROJETO",
-    storageBucket: "SEU_BUCKET.appspot.com",
-    messagingSenderId: "SEU_ID",
-    appId: "SEU_APP_ID"
-};
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-// Inicializar Firebase
-firebase.initializeApp(firebaseConfig);
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            alert("Login realizado com sucesso!");
+        })
+        .catch((error) => {
+            alert("Erro ao fazer login: " + error.message);
+        });
+});
