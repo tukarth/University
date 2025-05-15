@@ -1,31 +1,29 @@
-# Política de Segurança 🔒
+# Política de Qualidade  
 
-## Aviso Importante ⚠️
+## Compromisso  
 
-Ei, só pra avisar: este site ainda está em construção 🚧. Algumas coisas podem não funcionar 100% por enquanto. Ah, e fique tranquilo(a), não coletamos seus dados nem usamos rastreamento! 🚫📊
+Garantimos altos padrões de qualidade por meio de melhoria contínua e inovação.  
 
-## Como Reportar uma Vulnerabilidade 🐞
+## Atualizações  
 
-1. Encontrou algum problema? Manda um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br** com todos os detalhes.  
-2. A gente responde em até **30 dias** ⏳.  
-3. Se for mesmo um bug, vamos consertar rapidinho e te manter informado(a) sobre o progresso.  
-4. Se não for uma vulnerabilidade, explicamos direitinho o porquê.  
+- Monitoramento e revisão periódica.  
+- Implementação de melhorias estratégicas.  
+- Comunicação transparente sobre mudanças.  
 
-Segurança é prioridade para nós! Sua ajuda faz toda a diferença para deixar tudo mais seguro. Obrigado! 🙌
+Para sugestões, entre em contato: **arthur.oliveira99@cs.brazcubas.edu.br**.  
 
 ---
 
-# Security Policy 🔒
+# Quality Policy  
 
-## Important Notice ⚠️
+## Commitment  
 
-Hey, just a heads-up: this site is still under construction 🚧. Some features might not work perfectly yet. And don’t worry, we don’t collect your data or use tracking! 🚫📊
+We ensure high-quality standards through continuous improvement and innovation.  
 
-## How to Report a Vulnerability 🐞
+## Updates  
 
-1. Found an issue? Send an email to **arthur.oliveira99@cs.brazcubas.edu.br** with all the details.  
-2. We'll reply within **30 days** ⏳.  
-3. If it’s really a bug, we’ll fix it quickly and keep you posted on the progress.  
-4. If it’s not a vulnerability, we’ll explain exactly why.  
+- Regular monitoring and review.  
+- Implementation of strategic improvements.  
+- Transparent communication about changes.  
 
-Security is a top priority! Your help makes all the difference to keep things safe. Thanks! 🙌
+For suggestions, contact: **arthur.oliveira99@cs.brazcubas.edu.br**.  
