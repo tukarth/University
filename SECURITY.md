@@ -1,15 +1,30 @@
-# Política de Segurança  
+# Política de Segurança
 
-## Como Relatar uma Vulnerabilidade  
+## Aviso Importante
 
-Caso encontre uma vulnerabilidade no projeto, siga os seguintes passos:  
+Este site está atualmente **em desenvolvimento**. Algumas funcionalidades podem não estar completas ou operando normalmente. Agradecemos sua compreensão durante esse processo.
 
-1. Envie um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br** com uma descrição detalhada do problema.  
-2. Aguarde um prazo máximo de **30 dias** para uma resposta inicial.  
-3. Se confirmada a vulnerabilidade, trabalharemos na correção e informaremos o progresso periodicamente.  
-4. Caso não seja considerada uma vulnerabilidade, explicaremos os motivos da decisão.  
+Também informamos que **não coletamos dados pessoais** e **não utilizamos qualquer tipo de rastreamento**. Sua navegação é totalmente anônima e segura.
 
-A segurança é prioridade, e sua colaboração é fundamental para manter o projeto seguro para todos.  
+## Como Relatar uma Vulnerabilidade
+
+1. Envie um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br**, com uma descrição clara e detalhada do problema.
+2. Você receberá uma resposta inicial em até **30 dias**.
+3. Se a vulnerabilidade for confirmada, iniciaremos o processo de correção e manteremos você informado.
+4. Caso o problema não seja considerado uma vulnerabilidade, explicaremos os motivos com transparência.
+
+A segurança é uma prioridade. Sua colaboração é essencial para tornar este projeto mais seguro para todos.
+
+---
+
+# Registro de Atualizações
+
+| Data       | Versão | Alteração                                                   |
+|------------|--------|--------------------------------------------------------------|
+| 14/05/2025 | 1.0    | Publicação inicial da Política de Segurança                  |
+| 14/05/2025 | 1.1    | Adicionado aviso de que o site está em construção            |
+| 14/05/2025 | 1.2    | Incluída informação de que o site não coleta dados pessoais  |
+| 14/05/2025 | 1.3    | Texto revisado e traduzido para inglês                       |
 
 # Security Policy  
 
