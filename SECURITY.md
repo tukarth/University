@@ -15,12 +15,6 @@ Também informamos que **não coletamos dados pessoais** e **não utilizamos qua
 
 A segurança é uma prioridade. Sua colaboração é essencial para tornar este projeto mais seguro para todos.
 
----
-
-# Registro de Atualizações
-
-| Data       | versão | Alteração
-| 14/05/2025 | 1.0 | Publicação inicial da Política de Segurança
 
 # Security Policy  
 
