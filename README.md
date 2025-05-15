@@ -153,7 +153,7 @@
       <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx" target="_blank">
         🔗 Projeto: Picking 2024
       </a>
-      <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">📧 Contato</a>
+      <a href="SECURITY.md">📧 Contato</a>
     </div>
 
 
