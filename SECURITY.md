@@ -1,30 +1,31 @@
-# Política de Segurança
+# Política de Segurança 🔒
 
-## Aviso Importante
+## Aviso Importante ⚠️
 
-Este site está atualmente **em desenvolvimento**. Algumas funcionalidades podem não estar completas ou operando normalmente. Agradecemos sua compreensão durante esse processo.
+Ei, só pra avisar: este site ainda está em construção 🚧. Algumas coisas podem não funcionar 100% por enquanto. Ah, e fique tranquilo(a), não coletamos seus dados nem usamos rastreamento! 🚫📊
 
-Também informamos que **não coletamos dados pessoais** e **não utilizamos qualquer tipo de rastreamento**. Sua navegação é totalmente anônima e segura.
+## Como Reportar uma Vulnerabilidade 🐞
 
-## Como Relatar uma Vulnerabilidade
+1. Encontrou algum problema? Manda um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br** com todos os detalhes.  
+2. A gente responde em até **30 dias** ⏳.  
+3. Se for mesmo um bug, vamos consertar rapidinho e te manter informado(a) sobre o progresso.  
+4. Se não for uma vulnerabilidade, explicamos direitinho o porquê.  
 
-1. Envie um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br**, com uma descrição clara e detalhada do problema.
-2. Você receberá uma resposta inicial em até **30 dias**.
-3. Se a vulnerabilidade for confirmada, iniciaremos o processo de correção e manteremos você informado.
-4. Caso o problema não seja considerado uma vulnerabilidade, explicaremos os motivos com transparência.
+Segurança é prioridade para nós! Sua ajuda faz toda a diferença para deixar tudo mais seguro. Obrigado! 🙌
 
-A segurança é uma prioridade. Sua colaboração é essencial para tornar este projeto mais seguro para todos.
+---
 
+# Security Policy 🔒
 
-# Security Policy  
+## Important Notice ⚠️
 
-## Reporting a Vulnerability  
+Hey, just a heads-up: this site is still under construction 🚧. Some features might not work perfectly yet. And don’t worry, we don’t collect your data or use tracking! 🚫📊
 
-If you discover a vulnerability in the project, please follow these steps:  
+## How to Report a Vulnerability 🐞
 
-1. Send an email to **arthur.oliveira99@cs.brazcubas.edu.br** with a detailed description of the issue.  
-2. Expect an initial response within **30 days**.  
-3. If the vulnerability is confirmed, we will work on fixing it and provide periodic updates on the progress.  
-4. If the issue is not considered a vulnerability, we will explain the reasons for the decision.  
+1. Found an issue? Send an email to **arthur.oliveira99@cs.brazcubas.edu.br** with all the details.  
+2. We'll reply within **30 days** ⏳.  
+3. If it’s really a bug, we’ll fix it quickly and keep you posted on the progress.  
+4. If it’s not a vulnerability, we’ll explain exactly why.  
 
-Security is a priority, and your collaboration is essential to keeping the project safe for everyone.  
+Security is a top priority! Your help makes all the difference to keep things safe. Thanks! 🙌
