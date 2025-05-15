@@ -19,12 +19,8 @@ A segurança é uma prioridade. Sua colaboração é essencial para tornar este 
 
 # Registro de Atualizações
 
-| Data       | Versão | Alteração                                                   |
-|------------|--------|--------------------------------------------------------------|
-| 14/05/2025 | 1.0    | Publicação inicial da Política de Segurança                  |
-| 14/05/2025 | 1.1    | Adicionado aviso de que o site está em construção            |
-| 14/05/2025 | 1.2    | Incluída informação de que o site não coleta dados pessoais  |
-| 14/05/2025 | 1.3    | Texto revisado e traduzido para inglês                       |
+| Data       | versão | Alteração
+| 14/05/2025 | 1.0 | Publicação inicial da Política de Segurança
 
 # Security Policy  
 
