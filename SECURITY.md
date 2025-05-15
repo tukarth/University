@@ -18,7 +18,7 @@ Versões não suportadas não recebem correções de segurança, portanto, recom
 Caso encontre uma vulnerabilidade no projeto, siga os seguintes passos:  
 
 1. Envie um e-mail para **arthur.oliveira99@cs.brazcubas.edu.br** com uma descrição detalhada do problema.  
-2. Aguarde um prazo máximo de **X dias** para uma resposta inicial.  
+2. Aguarde um prazo máximo de **30** para uma resposta inicial.  
 3. Se confirmada a vulnerabilidade, trabalharemos na correção e informaremos o progresso periodicamente.  
 4. Caso não seja considerada uma vulnerabilidade, explicaremos os motivos da decisão.  
 
