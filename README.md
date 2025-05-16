@@ -130,6 +130,9 @@
       Este site reúne projetos acadêmicos em um espaço intuitivo, visual e fácil de navegar. A proposta é compartilhar ideias, soluções criativas e contribuir para o desenvolvimento de novas perspectivas.
 Nosso compromisso é proporcionar uma experiência dinâmica, conectando mentes e incentivando a criação de projetos que fazem a diferença.
 
+📧Todos os projetos estão disponíveis no link abaixo. O acesso é restrito e requer senha. Para obter mais informações ou solicitar acesso, entre em contato via e-mail: arthur.oliveira99@cs.brazcubas.edu.br.
+
+
     </p>
     <p>
     
@@ -153,7 +156,7 @@ Nosso compromisso é proporcionar uma experiência dinâmica, conectando mentes 
       <a href="https://1drv.ms/p/c/de9e79f6174a4628/Ec_EU4AHjVlLqA6oD1MwHuMBimMcpdcxXzubo7a4QNHERw?e=yzPikx" target="_blank">
         🔗 Projeto: Picking 2024
       </a>
-      <a href="SECURITY.md">📧 Security Policy</a>
+      <a href="SECURITY.md"> Security Policy</a>
     </div>
 
 
