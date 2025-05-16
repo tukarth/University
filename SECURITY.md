@@ -1,29 +1,15 @@
-# Política de Qualidade  
+Política de Privacidade  
 
-## Compromisso  
+*Última atualização: 16/05/2025**  
 
-Garantimos altos padrões de qualidade por meio de melhoria contínua e inovação.  
+Este site respeita a privacidade dos usuários e não coleta, armazena ou compartilha dados pessoais. Nenhuma informação é registrada ou utilizada para qualquer finalidade, garantindo total anonimato durante a navegação.  
 
-## Atualizações  
+Se houver dúvidas ou necessidade de contato, envie um e-mail para: arthur.oliveira99@cs.brazcubas.edu.br  
 
-- Monitoramento e revisão periódica.  
-- Implementação de melhorias estratégicas.  
-- Comunicação transparente sobre mudanças.  
+ Privacy Policy  
 
-Para sugestões, entre em contato: **arthur.oliveira99@cs.brazcubas.edu.br**.  
+*Last updated: 16/05/2025**  
 
----
+This website respects user privacy and does not collect, store, or share personal data. No information is recorded or used for any purpose, ensuring complete anonymity while browsing.  
 
-# Quality Policy  
-
-## Commitment  
-
-We ensure high-quality standards through continuous improvement and innovation.  
-
-## Updates  
-
-- Regular monitoring and review.  
-- Implementation of strategic improvements.  
-- Transparent communication about changes.  
-
-For suggestions, contact: **arthur.oliveira99@cs.brazcubas.edu.br**.  
+For any inquiries, please contact: arthur.oliveira99@cs.brazcubas.edu.br 
