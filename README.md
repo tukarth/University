@@ -125,14 +125,14 @@
 <body>
 
   <section>
-    <h2>Conectando ideias, construindo futuros.</h2>
+    <h2>Projetos em Destaque.</h2>
     <p>
-      Este site apresenta os projetos dos alunos de Logística da Universidade Brás Cubas (UBC),
-      em um espaço simples, visual e fácil de navegar. A proposta é compartilhar soluções criativas,
-      ideias práticas e mostrar como a logística faz a diferença no dia a dia.
+      Este site reúne projetos acadêmicos em um espaço intuitivo, visual e fácil de navegar. A proposta é compartilhar ideias, soluções criativas e contribuir para o desenvolvimento de novas perspectivas.
+Nosso compromisso é proporcionar uma experiência dinâmica, conectando mentes e incentivando a criação de projetos que fazem a diferença.
+
     </p>
     <p>
-      🔒 Sem rastreamento, sem complicação.
+    
 
 
 
