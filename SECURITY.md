@@ -1,15 +1,15 @@
-Política de Privacidade  
+# Política de Privacidade  
+**Última atualização: 16/05/2025**
 
-*Última atualização: 16/05/2025**  
+Este site respeita e valoriza a privacidade dos usuários. Nenhum dado pessoal é coletado, armazenado ou compartilhado durante a navegação. Não utilizamos cookies, rastreadores ou qualquer outro tipo de mecanismo de coleta de informações. A experiência do usuário é completamente anônima e segura.
 
-Este site respeita a privacidade dos usuários e não coleta, armazena ou compartilha dados pessoais. Nenhuma informação é registrada ou utilizada para qualquer finalidade, garantindo total anonimato durante a navegação.  
+Para mais informações ou dúvidas, entre em contato pelo e-mail: [arthur.oliveira99@cs.brazcubas.edu.br](mailto:arthur.oliveira99@cs.brazcubas.edu.br)
 
-Se houver dúvidas ou necessidade de contato, envie um e-mail para: arthur.oliveira99@cs.brazcubas.edu.br  
+---
 
- Privacy Policy  
+# Privacy Policy  
+**Last updated: 16/05/2025**
 
-*Last updated: 16/05/2025**  
+This website respects and values user privacy. No personal data is collected, stored, or shared during browsing. We do not use cookies, trackers, or any other data collection tools. The user experience is entirely anonymous and secure.
 
-This website respects user privacy and does not collect, store, or share personal data. No information is recorded or used for any purpose, ensuring complete anonymity while browsing.  
-
-For any inquiries, please contact: arthur.oliveira99@cs.brazcubas.edu.br 
+For further information or inquiries, please contact: [arthur.oliveira99@cs.brazcubas.edu.br](mailto:arthur.oliveira99@cs.brazcubas.edu.br)
