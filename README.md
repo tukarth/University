@@ -127,11 +127,9 @@
   <section>
     <h2>Projetos em Destaque.</h2>
     <p>
-      Este site reúne projetos acadêmicos em um espaço intuitivo, visual e fácil de navegar. A proposta é compartilhar ideias, soluções criativas e contribuir para o desenvolvimento de novas perspectivas.
-Nosso compromisso é proporcionar uma experiência dinâmica, conectando mentes e incentivando a criação de projetos que fazem a diferença. 
-    
-        
-        📧Todos os projetos estão disponíveis no link abaixo. O acesso é restrito e requer senha. Para obter mais informações ou solicitar acesso, entre em contato via e-mail: arthur.oliveira99@cs.brazcubas.edu.br.
+      Este site reúne projetos acadêmicos em um ambiente visualmente agradável, intuitivo e fácil de navegar. O objetivo é compartilhar ideias, apresentar soluções criativas e incentivar novas formas de pensar. Nosso compromisso é oferecer uma experiência dinâmica, conectando mentes e inspirando a criação de projetos que geram impacto.
+
+📁 Todos os projetos estão disponíveis no link abaixo. O acesso é restrito e requer senha. Para solicitá-lo, basta enviar uma mensagem diretamente pelo Google Drive.
 
 
     </p>
