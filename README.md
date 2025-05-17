@@ -129,7 +129,7 @@
     </p>📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
 
 
-    </p>
+    
     <p>
     
 
