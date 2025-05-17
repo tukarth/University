@@ -29,7 +29,7 @@ Security is a priority, and your collaboration is essential to keeping the proje
 ---
 
 **Última atualização:** 17 de maio de 2025  
-**Tipo de atualização:** Melhorias na segurança do site e inclusão de diretrizes para relato de vulnerabilidades.
+**Tipo de atualização:** Melhorias na segurança do site.
 
 **Last updated:** May 17, 2025  
-**Update type:** Website security improvements and addition of vulnerability reporting guidelines.
+**Update type:** Website security improvements.
