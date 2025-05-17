@@ -126,8 +126,7 @@
     <h2>Projetos em Destaque.</h2>
     <p>
       Este site reúne projetos acadêmicos em um ambiente visualmente agradável, intuitivo e fácil de navegar. O objetivo é compartilhar ideias, apresentar soluções criativas e incentivar novas formas de pensar. Nosso compromisso é oferecer uma experiência dinâmica, conectando mentes e inspirando a criação de projetos que geram impacto.
-
-📁 Todos os projetos estão disponíveis no link abaixo. O acesso é restrito e requer senha. Para solicitá-lo, basta enviar uma mensagem diretamente pelo Google Drive.
+    </p> 📁 Todos os projetos estão disponíveis no link abaixo.Para solicitá-lo, basta enviar uma mensagem diretamente pelo Google Drive.
 
 
     </p>
