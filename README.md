@@ -144,13 +144,13 @@ Nosso compromisso é proporcionar uma experiência dinâmica, conectando mentes 
     </p>
 
         
-      </a>
+      
     <div class="buttons">
       <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">
         🔗 Acesso Projetos
      
       <a href="SECURITY.md"> Security Policy</a>
-    </div>
+    
 
 
   <section id="galeria" style="text-align:center; margin-top:50px;">
