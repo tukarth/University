@@ -1,11 +1,4 @@
-<div style="background-color: black; padding: 10px; text-align: center;">
-<form action="firebase-config.js" method="post" style="text-align: center;">
-    <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
-    <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
-    <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>     
-
-</form>
-</div>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -71,7 +64,7 @@
       color: #fff;
       background: #1abc9c;
       padding: 10px 15px;
-      font-size: 13px; /* DIMINUI O TAMANHO AQUI */
+      font-size: 13px;
       text-align: center;
       border-radius: 10px;
       transition: background 0.3s ease;
@@ -99,69 +92,96 @@
       to { opacity: 1; }
     }
 
-    /* Estilos da galeria */
-    .carousel img {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
+    /* Estilos do formulário de feedback */
+    .feedback-form {
+      background-color: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-    .carousel button {
-      margin: 10px 5px;
-      padding: 10px 20px;
-      font-size: 14px;
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
       border: none;
-      border-radius: 8px;
-      background-color: #1abc9c;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      border-radius: 5px;
     }
 
-    .carousel button:hover {
-      background-color: #16a085;
+    .feedback-form button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .feedback-form button:hover {
+      background-color: #0056b3;
+    }
+
+    .feedback-list {
+      margin-top: 20px;
+    }
+
+    .feedback-item {
+      background: #1abc9c;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Bem-vindo ao Meu Site</h1>
+  </header>
+
   <section>
-    <h2>Projetos em Destaque.</h2>
+    <h2>Projetos em Destaque</h2>
     <p>
        Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.
-    </p>📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
-
-
-    
-    <p>
-    
-
-
-
     </p>
+    📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
 
-        
-      
     <div class="buttons">
-      <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">
-        🔗 Acesso Projetos
-     
-      <a href="SECURITY.md"> Security Policy</a>
-    
+      <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">🔗 Acesso Projetos</a>
+      <a href="SECURITY.md">Política de Segurança</a>
+    </div>
+  </section>
 
+  <section id="feedback" class="feedback-form">
+    <h2>Deixe seu Feedback</h2>
+    <form id="formFeedback" onsubmit="submitFeedback(event)">
+      <input type="text" id="name" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Seu feedback" rows="4" required></textarea>
+      <button type="submit">Enviar Feedback</button>
+    </form>
+    <div id="feedbackList" class="feedback-list"></div>
+  </section>
 
   <section id="galeria" style="text-align:center; margin-top:50px;">
     <h2>Galeria</h2>
-   <div class="slideshow">
-    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
-    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
-    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
-    <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    <div class="slideshow">
+      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+      <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
+      <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
+      <img src="Imagem do WhatsApp de 2025-05-03 às 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    </div>
     <br>
-    
+  </section>
 
-<script>
+  <footer>
+   @tukarth - Todos os direitos reservados. &copy; 2025
+  </footer>
+
+  <script>
     let slides = document.querySelectorAll(".slide");
     let index = 0;
 
@@ -183,21 +203,26 @@
 
     setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
     showSlide(); // Exibe a primeira imagem
-</script>
-    </div>
-  </section>
 
-  <footer>
-   @tukarth - Todos os direitos reservados. &copy; 2025
-  </footer>
+    // Função para enviar feedback
+    function submitFeedback(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
 
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function mudarSlide(n) {
-      slides[slideIndex].style.display = "none";
-      slideIndex = (slideIndex + n + slides.length) % slides.length;
-      slides[slideIndex].style.display = "block";
+      if (name && email && message) {
+          const feedbackList = document.getElementById('feedbackList');
+          const feedbackItem = document.createElement('div');
+          feedbackItem.className = 'feedback-item';
+          feedbackItem.innerHTML = `<strong>${name}</strong> (${email}): <p>${message}</p>`;
+          feedbackList.appendChild(feedbackItem);
+          document.getElementById('formFeedback').reset(); // Limpa o formulário
+      } else {
+          alert('Por favor, preencha todos os campos.');
+      }
     }
   </script>
+</body>
+</html>
+
