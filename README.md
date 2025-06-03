@@ -5,7 +5,6 @@
     <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
     <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>
 </form>
-</form>
 </div>
 <html lang="pt-BR">
 <head>
