@@ -1,6 +1,6 @@
 <div style="background-color: black; padding: 10px; text-align: center;">
     
-<!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 </head>
 <body style="text-align:center; font-family:sans-serif; margin-top: 100px;">
 
-  <h2>Bem-vindo 🚀</h2>
+  <h2>Bem-vindo </h2>
 
   <form onsubmit="login(); return false;">
     <input id="email" type="email" placeholder="Email" required 
@@ -20,7 +20,7 @@
       style="background:#007BFF;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">
       Entrar
     </button>
-  </form>
+ 
 
   <p><a href="cadastro.html">Criar conta</a></p>
 
