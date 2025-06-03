@@ -28,8 +28,8 @@ Security is a priority, and your collaboration is essential to keeping the proje
 
 ---
 
-**Última atualização:** 17 de maio de 2025  
+**Última atualização:** 02/06/2025  
 **Tipo de atualização:** Melhorias na segurança do site.
 
-**Last updated:** May 17, 2025  
+**Last updated:** 02/06/2025
 **Update type:** Website security improvements.
