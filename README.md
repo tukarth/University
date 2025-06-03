@@ -1,6 +1,10 @@
 <div style="background-color: black; padding: 10px; text-align: center;">
     
-
+<form action="https://seu-grafana.com/login" method="post">
+    <input type="text" placeholder="Usuário" name="username" required>
+    <input type="password" placeholder="Senha" name="password" required>
+    <button type="submit">Entrar</button>
+</form>
 </div>
 <html lang="pt-BR">
 <head>
