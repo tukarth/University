@@ -1,268 +1,203 @@
-<!DOCTYPE html>
+<div style="background-color: black; padding: 10px; text-align: center;">
+<form action="firebase-config.js" method="post" style="text-align: center;">
+    <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
+    <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
+    <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>     
+
+</form>
+</div>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio profissional de Arthur - Desenvolvedor Front-End e Designer">
-    <meta name="author" content="Arthur">
-    <title>Portfólio Arthur</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset e Fontes */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site com Fundo Preto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        body {
-            background-color: #000;
-            color: #fff;
-        }
+    body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    header {
+      padding: 30px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-        }
+    header h1 {
+      font-size: 2.5rem;
+      animation: slideIn 1s ease-out;
+    }
 
-        nav {
-            margin-top: 10px;
-        }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 2s ease-in;
+    }
 
-        nav a {
-            color: #1abc9c;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
 
-        nav a:hover {
-            color: #16a085;
-        }
+    section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-        section h2 {
-            margin-bottom: 15px;
-        }
+    .buttons a {
+      text-decoration: none;
+      color: #fff;
+      background: #1abc9c;
+      padding: 10px 15px;
+      font-size: 13px; /* DIMINUI O TAMANHO AQUI */
+      text-align: center;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-        }
+    .buttons a:hover {
+      background: #16a085;
+    }
 
-        .project {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
 
-        .project:hover {
-            transform: scale(1.02);
-        }
+    @keyframes slideIn {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-        .project img {
-            width: 100%;
-            display: block;
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-        .project-description {
-            padding: 10px;
-        }
+    /* Estilos da galeria */
+    .carousel img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+    .carousel button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1abc9c;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-        .buttons a {
-            text-decoration: none;
-            color: #fff;
-            background: #1abc9c;
-            padding: 10px 15px;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
-
-        .buttons a:hover {
-            background: #16a085;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #aaa;
-        }
-
-        .social {
-            margin: 10px 0;
-        }
-
-        .social a {
-            color: #1abc9c;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social a:hover {
-            color: #16a085;
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: #f1c40f;
-        }
-
-        /* Responsivo */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav a {
-                margin: 0 10px;
-            }
-        }
-    </style>
+    .carousel button:hover {
+      background-color: #16a085;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Arthur Portfólio</h1>
-    <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#galeria">Galeria</a>
-        <a href="#contato">Contato</a>
-    </nav>
-</header>
+  <section>
+    <h2>Projetos em Destaque.</h2>
+    <p>
+       Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.
+    </p>📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
 
-<section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>.</p>
-</section>
 
-<section id="projetos">
-    <h2>Meus Projetos</h2>
-    <div class="project-grid">
-        <!-- Projetos -->
-        <div class="project">
-            <img src="https://via.placeholder.com/600x400" alt="Projeto 1">
-            <div class="project-description">
-                <h3>Projeto 1</h3>
-                <p>Sistema de tarefas web.</p>
-                <a href="#">Ver Detalhes</a>
-            </div>
-        </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/600x400" alt="Projeto 2">
-            <div class="project-description">
-                <h3>Projeto 2</h3>
-                <p>Site para portfólio profissional.</p>
-                <a href="#">Ver Detalhes</a>
-            </div>
-        </div>
-    </div>
-</section>
+    
+    <p>
+    
 
-<section id="galeria" style="text-align:center;">
-    <h2>Galeria</h2>
-    <div>
-        <img src="Imagem1.jpg" alt="Foto 1" class="slide" onclick="openModal(this.src)">
-        <img src="Imagem2.jpg" alt="Foto 2" class="slide" onclick="openModal(this.src)">
-        <img src="Imagem3.jpg" alt="Foto 3" class="slide" onclick="openModal(this.src)">
-    </div>
-</section>
 
-<div id="myModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="img01">
-</div>
 
-<section id="contato">
-    <h2>Entre em Contato</h2>
+    </p>
+
+        
+      
     <div class="buttons">
-        <a href="mailto:seuemail@gmail.com">📧 Email</a>
-        <a href="https://wa.me/55SEUNUMERO" target="_blank">💬 WhatsApp</a>
-        <a href="https://www.linkedin.com/in/SEULINKEDIN" target="_blank">🔗 LinkedIn</a>
-        <a href="https://github.com/SEUGITHUB" target="_blank">🐙 GitHub</a>
-    </div>
-</section>
+      <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">
+        🔗 Acesso Projetos
+     
+      <a href="SECURITY.md"> Security Policy</a>
+    
 
-<footer>
-    <div class="social">
-        <a href="https://wa.me/55SEUNUMERO" target="_blank">WhatsApp</a> |
-        <a href="https://github.com/SEUGITHUB" target="_blank">GitHub</a> |
-        <a href="https://linkedin.com/in/SEULINKEDIN" target="_blank">LinkedIn</a>
-    </div>
-    &copy; 2025 - @tukarth - Todos os direitos reservados.
-</footer>
+
+  <section id="galeria" style="text-align:center; margin-top:50px;">
+    <h2>Galeria</h2>
+   <div class="slideshow">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
+    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
+    <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    <br>
+    
 
 <script>
-    // Modal da galeria
-    function openModal(src) {
-        const modal = document.getElementById("myModal");
-        const img = document.getElementById("img01");
-        img.src = src;
-        modal.style.display = "block";
-    }
-    function closeModal() {
-        document.getElementById("myModal").style.display = "none";
-    }
-</script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
 
-</body>
-</html>
+    function showSlide() {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function mudarSlide(step) {
+        index = (index + step + slides.length) % slides.length;
+        showSlide();
+    }
+
+    function autoSlide() {
+        index = (index + 1) % slides.length;
+        showSlide();
+    }
+
+    setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
+    showSlide(); // Exibe a primeira imagem
+</script>
+    </div>
+  </section>
+
+  <footer>
+   @tukarth - Todos os direitos reservados. &copy; 2025
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function mudarSlide(n) {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
