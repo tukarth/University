@@ -202,6 +202,36 @@
             background-color: #0056b3;
         }
 
+        /* Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+        }
+
+        /* Additional Styles */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project img {
+            transition: transform 0.3s;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
@@ -217,25 +247,54 @@
 
 <section id="projetos">
     <h2>Projetos em Destaque</h2>
-    <div class="project">
-        <img src="https://via.placeholder.com/600x400" alt="Projeto 1">
-        <div class="project-description">
-            <h3>Projeto 1</h3>
-            <p>Descrição do projeto 1. Este projeto envolve...</p>
+    <div class="project-grid">
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 1">
+            <div class="project-description">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1. Este projeto envolve a criação de uma aplicação web para gerenciar tarefas.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <img src="https://via.placeholder.com/600x400" alt="Projeto 2">
-        <div class="project-description">
-            <h3>Projeto 2</h3>
-            <p>Descrição do projeto 2. Este projeto envolve...</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 2">
+            <div class="project-description">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2. Este projeto é um sistema de gerenciamento de biblioteca.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
         </div>
-    </div>
-    <div class="project">
-        <img src="https://via.placeholder.com/600x400" alt="Projeto 3">
-        <div class="project-description">
-            <h3>Projeto 3</h3>
-            <p>Descrição do projeto 3. Este projeto envolve...</p>
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 3">
+            <div class="project-description">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto 3. Um aplicativo móvel para rastreamento de hábitos.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 4">
+            <div class="project-description">
+                <h3>Projeto 4</h3>
+                <p>Descrição do projeto 4. Um site de portfólio para artistas e designers.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 5">
+            <div class="project-description">
+                <h3>Projeto 5</h3>
+                <p>Descrição do projeto 5. Uma plataforma de e-learning para cursos online.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
+        </div>
+        <div class="project">
+            <img src="https://via.placeholder.com/600x400" alt="Projeto 6">
+            <div class="project-description">
+                <h3>Projeto 6</h3>
+                <p>Descrição do projeto 6. Um sistema de reservas para restaurantes.</p>
+                <a href="#" class="buttons">Ver Detalhes</a>
+            </div>
         </div>
     </div>
     <div class="buttons">
