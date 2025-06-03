@@ -1,9 +1,44 @@
 <div style="background-color: black; padding: 10px; text-align: center;">
     
-<form action="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" method="post" style="text-align: center;">
-    <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
-    <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
-    <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; margin-top: 100px;">
+
+  <h2>Bem-vindo 🚀</h2>
+
+  <form onsubmit="login(); return false;">
+    <input id="email" type="email" placeholder="Email" required 
+      style="display:block;margin:8px auto;padding:8px;border-radius:8px;border:1px solid #ccc;width:200px;">
+    <input id="senha" type="password" placeholder="Senha" required 
+      style="display:block;margin:8px auto;padding:8px;border-radius:8px;border:1px solid #ccc;width:200px;">
+    
+    <button type="submit" 
+      style="background:#007BFF;color:white;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;">
+      Entrar
+    </button>
+  </form>
+
+  <p><a href="cadastro.html">Criar conta</a></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script>
+    const supabase = supabase.createClient('https://SEU-PROJETO.supabase.co', 'SUA-ANON-KEY');
+    
+    async function login() {
+      const { error } = await supabase.auth.signInWithPassword({
+        email: email.value,
+        password: senha.value
+      });
+      error ? alert('Erro no login') : location = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
+
 </form>
 </div>
 <html lang="pt-BR">
