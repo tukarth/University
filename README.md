@@ -1,5 +1,5 @@
 <div style="background-color: black; padding: 10px; text-align: center;">
-<form action="http://localhost:3000/" method="post" style="text-align: center;">
+<form action="https://6000-firebase-studio-1749306139597.cluster-etsqrqvqyvd4erxx7qq32imrjk.cloudworkstations.dev/login" method="post" style="text-align: center;">
     <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
     <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
     <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>     
