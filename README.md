@@ -201,10 +201,11 @@
       <h2>Galeria</h2>
       <p style="color:#bbb; font-size:0.9rem;">(Exibição estática; carrossel dinâmico pode ser adicionado via JS.)</p>
       <div class="gallery">
-        <img src="https://placehold.co/600x400.png" alt="Foto 1">
-        <img src="https://placehold.co/600x401.png" alt="Foto 2">
-        <img src="https://placehold.co/600x402.png" alt="Foto 3">
-      </div>
+        <<img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
+    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
+    <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    <br
     </section>
 
   </div>
