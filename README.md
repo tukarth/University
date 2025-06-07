@@ -1,109 +1,253 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitrine de Código - Visão Geral da Página de Projetos</title>
-    <style>
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; line-height: 1.6; margin: 0 auto; max-width: 900px; padding: 20px; color: #333; background-color: #f9f9f9; }
-        header, footer { text-align: center; padding: 1em 0; margin-bottom: 20px; }
-        header { border-bottom: 1px solid #eee;}
-        footer { border-top: 1px solid #eee; margin-top: 40px; font-size: 0.9em; color: #555;}
-        h1, h2, h3 { color: #233237; margin-top: 1.5em; margin-bottom: 0.5em; font-weight: 500;}
-        h1 { font-size: 2.2em; border-bottom: 1px solid #74EBD5; padding-bottom: 0.3em; text-align: center;}
-        h2 { font-size: 1.8em; color: #74EBD5; margin-top: 2em;}
-        h3 { font-size: 1.4em; }
-        p { margin-bottom: 1em; color: #455A64; }
-        section { background-color: #fff; padding: 20px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        img { max-width: 100%; height: auto; border-radius: 6px; margin-bottom: 0.5em; border: 1px solid #eee; }
-        a { color: #74EBD5; text-decoration: none; font-weight: 500;}
-        a:hover { text-decoration: underline; color: #5cb8a9; }
-        .project-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .project-card { border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; background-color: #fdfdfd; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
-        .project-card img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 10px; }
-        .button-link { display: inline-block; padding: 10px 18px; background-color: #74EBD5; color: #233237; text-decoration: none; border-radius: 5px; margin-right: 10px; margin-bottom: 10px; transition: background-color 0.3s ease; font-weight: 500; }
-        .button-link:hover { background-color: #5cb8a9; }
-        .button-link.outline { background-color: transparent; border: 1px solid #F2EF91; color: #F2EF91; }
-        .button-link.outline:hover { background-color: rgba(242, 239, 145, 0.1); }
-        .form-section div { margin-bottom: 15px; }
-        .form-section label { display: block; margin-bottom: 5px; font-weight: 500; color: #37474F; }
-        .form-section input[type="text"], .form-section textarea { width: calc(100% - 22px); padding: 10px; border: 1px solid #ccc; border-radius: 4px; background-color: #fcfcfc; }
-        .form-section textarea { min-height: 80px; }
-        .form-section em { color: #78909C; font-size: 0.9em; display: block; margin-top:5px; }
-        .header-logo { font-size: 1.5em; font-weight: 700; color: #233237;}
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vitrine de Projetos | tukarth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f6f8;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #233237;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    nav {
+      background-color: #1e2a2f;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #74EBD5;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; color: #233237; }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 60px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 10px;
+      color: #233237;
+    }
+
+    .project-content p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      color: #74EBD5;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #74EBD5;
+      color: #233237;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #5cb8a9;
+    }
+
+    .form-section form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .form-section label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .form-section button {
+      background-color: #233237;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .form-section button:hover {
+      background-color: #111;
+    }
+
+    footer {
+      background-color: #1e2a2f;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #74EBD5;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="header-logo">Vitrine de Código</div>
-        <p style="font-size: 0.9em; color: #555;">(Representação HTML Estática da Página de Projetos)</p>
-    </header>
 
-    <section id="destaques">
-        <h1>Projetos em Destaque</h1>
-        <p>Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.</p>
-    </section>
+<header>
+  <h1>Vitrine de Projetos</h1>
+  <p>Projetos desenvolvidos com dedicação e criatividade.</p>
+</header>
 
-    <section id="galeria">
-        <h2>Galeria de Inspiração</h2>
-        <img src="https://placehold.co/1200x600.png" alt="Destaque do Projeto 1" data-ai-hint="technology abstract">
-        <p><em>Nota: O carrossel de imagens é dinâmico e interativo na aplicação real. Esta é uma representação estática de uma das imagens.</em></p>
-    </section>
+<nav>
+  <a href="#projetos">Projetos</a>
+  <a href="#contato">Contato</a>
+  <a href="#sobre">Sobre</a>
+</nav>
 
-    <section id="nossos-projetos">
-        <h2>Nossos Projetos</h2>
-        <div class="project-card-grid">
-            <div class="project-card">
-                <h3>Sistema de Gestão Acadêmica</h3>
-                <img src="https://placehold.co/600x400.png" alt="Interface do Sistema de Gestão Acadêmica" data-ai-hint="software interface">
-                <p>Plataforma completa para gerenciamento de notas, frequências e comunicação entre alunos e professores.</p>
-                <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" class="button-link" target="_blank" rel="noopener noreferrer">Acessar Projeto</a>
-            </div>
-            <div class="project-card">
-                <h3>Aplicativo Mobile de Finanças</h3>
-                <img src="https://placehold.co/600x400.png" alt="Tela do Aplicativo Mobile de Finanças" data-ai-hint="mobile app">
-                <p>App para controle de despesas pessoais, com gráficos e relatórios detalhados.</p>
-                <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" class="button-link" target="_blank" rel="noopener noreferrer">Acessar Projeto</a>
-            </div>
-            <div class="project-card">
-                <h3>Website E-commerce de Artesanato</h3>
-                <img src="https://placehold.co/600x400.png" alt="Página inicial do E-commerce de Artesanato" data-ai-hint="website design">
-                <p>Loja virtual para venda de produtos artesanais, com integração de pagamento e cálculo de frete.</p>
-                <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" class="button-link" target="_blank" rel="noopener noreferrer">Acessar Projeto</a>
-            </div>
-        </div>
-    </section>
+<section id="projetos">
+  <h2>Meus Projetos</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="https://placehold.co/600x400.png" alt="Projeto 1">
+      <div class="project-content">
+        <h3>Sistema de Gestão Acadêmica</h3>
+        <p>Plataforma completa para notas, frequências e comunicação acadêmica.</p>
+        <div class="tags">HTML, JS, PHP, MySQL</div>
+        <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso" class="button" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
 
-    <section id="acesso-contato">
-        <h2>Acesso e Contato</h2>
-        <p>Para acessar os projetos, utilize o link do Google Drive. Em caso de dúvidas ou para mais informações, entre em contato.</p>
-        <div>
-            <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" class="button-link" target="_blank" rel="noopener noreferrer">Acesso Projetos (Google Drive)</a>
-            <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br" class="button-link outline">Entrar em Contato</a>
-            <a href="security-policy/page.html" class="button-link outline">Política de Segurança</a>
-            <!-- Note: The link to security-policy might need adjustment if not also generated as a static HTML file -->
-        </div>
-    </section>
+    <div class="project-card">
+      <img src="https://placehold.co/600x400.png" alt="Projeto 2">
+      <div class="project-content">
+        <h3>App de Finanças</h3>
+        <p>Aplicativo mobile para controle de gastos e visualização de relatórios.</p>
+        <div class="tags">Flutter, Firebase</div>
+        <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso" class="button" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
 
-    <section id="ai-generator" class="form-section">
-        <h2>Gerador de Descrição com IA</h2>
-        <p>Crie descrições alternativas e mais atraentes para seus projetos.</p>
-        <div>
-            <label for="staticProjectName">Nome do Projeto</label>
-            <input type="text" id="staticProjectName" placeholder="Ex: Meu Incrível App" readonly>
-        </div>
-        <div>
-            <label for="staticExistingDescription">Descrição Existente</label>
-            <textarea id="staticExistingDescription" placeholder="Descreva seu projeto atual..." rows="3" readonly></textarea>
-        </div>
-        <em>Nota: Este é um formulário visual estático. Na aplicação real, ele é interativo e utiliza IA para gerar descrições.</em>
-    </section>
+    <div class="project-card">
+      <img src="https://placehold.co/600x400.png" alt="Projeto 3">
+      <div class="project-content">
+        <h3>E-commerce de Artesanato</h3>
+        <p>Loja virtual com carrinho, checkout e cálculo de frete.</p>
+        <div class="tags">HTML, CSS, JS, Stripe API</div>
+        <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso" class="button" target="_blank">Ver Projeto</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <p>&copy; ${new Date().getFullYear()} tukarth - Todos os direitos reservados.</p>
-    </footer>
+<section id="sobre">
+  <h2>Sobre Este Site</h2>
+  <p style="max-width: 800px; margin: auto; text-align: center;">
+    Esta vitrine foi criada com foco em apresentar projetos de maneira organizada, moderna e acessível.
+    Ideal para portfólios acadêmicos, profissionais e criativos.
+  </p>
+</section>
+
+<section id="contato" class="form-section">
+  <h2>Entre em Contato</h2>
+  <form action="mailto:arthur.oliveira99@cs.brazcubas.edu.br" method="post" enctype="text/plain">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required />
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 tukarth. Todos os direitos reservados.</p>
+  <div>
+    <a href="#">LinkedIn</a> |
+    <a href="#">GitHub</a> |
+    <a href="#">Política de Privacidade</a>
+  </div>
+</footer>
+
 </body>
 </html>
-
-    
