@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+<div style="background-color: black; padding: 10px; text-align: center;">
+<form action="firebase-config.js" method="post" style="text-align: center;">
+    <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
+    <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
+    <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>     
+
+</form>
+</div>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vitrine de Projetos - Tukarth</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <title>Site com Fundo Preto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -17,48 +24,56 @@
       background-color: #000;
       color: #fff;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
+      padding: 30px;
       text-align: center;
-      padding: 30px 10px;
-      background: rgba(255,255,255,0.05);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     header h1 {
       font-size: 2.5rem;
-      color: #1abc9c;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 30px 20px;
+      animation: slideIn 1s ease-out;
     }
 
     section {
-      margin-bottom: 40px;
-      padding: 25px;
-      background: rgba(255,255,255,0.03);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 15px;
-      backdrop-filter: blur(6px);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 2s ease-in;
     }
 
     section h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
-      color: #1abc9c;
+    }
+
+    section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     .buttons a {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 20px;
-      border-radius: 10px;
-      background: #1abc9c;
-      color: #000;
       text-decoration: none;
+      color: #fff;
+      background: #1abc9c;
+      padding: 10px 15px;
+      font-size: 13px; /* DIMINUI O TAMANHO AQUI */
+      text-align: center;
+      border-radius: 10px;
       transition: background 0.3s ease;
     }
 
@@ -66,111 +81,123 @@
       background: #16a085;
     }
 
-    .login-box {
+    footer {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
     }
 
-    .login-box input {
-      padding: 10px;
-      margin: 10px;
-      width: 80%;
-      max-width: 300px;
-      border-radius: 6px;
-      border: none;
+    @keyframes slideIn {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
-    .login-box button {
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Estilos da galeria */
+    .carousel img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .carousel button {
+      margin: 10px 5px;
       padding: 10px 20px;
-      background: #1abc9c;
-      color: #000;
+      font-size: 14px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      background-color: #1abc9c;
+      color: #fff;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    .login-box button:hover {
-      background: #16a085;
-    }
-
-    .carousel {
-      text-align: center;
-    }
-
-    .carousel img {
-      width: 90%;
-      max-width: 600px;
-      border-radius: 12px;
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
-      background-color: #111;
-      margin-top: 40px;
+    .carousel button:hover {
+      background-color: #16a085;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Vitrine de Projetos</h1>
-    <p>Desenvolvido por @tukarth</p>
-  </header>
+  <section>
+    <h2>Projetos em Destaque.</h2>
+    <p>
+       Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.
+    </p>📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
 
-  <main>
-    <div class="login-box">
-      <form action="firebase-config.js" method="post">
-        <input type="text" name="username" placeholder="Usuário" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <br>
-        <button type="submit">Entrar</button>
-      </form>
+
+    
+    <p>
+    
+
+
+
+    </p>
+
+        
+      
+    <div class="buttons">
+      <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">
+        🔗 Acesso Projetos
+     
+      <a href="SECURITY.md"> Security Policy</a>
+    
+
+
+  <section id="galeria" style="text-align:center; margin-top:50px;">
+    <h2>Galeria</h2>
+   <div class="slideshow">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
+    <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
+    <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+    <br>
+    
+
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function mudarSlide(step) {
+        index = (index + step + slides.length) % slides.length;
+        showSlide();
+    }
+
+    function autoSlide() {
+        index = (index + 1) % slides.length;
+        showSlide();
+    }
+
+    setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
+    showSlide(); // Exibe a primeira imagem
+</script>
     </div>
-
-    <section>
-      <h2>Sobre a Vitrine</h2>
-      <p>Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.</p>
-      <p>📁 Acesse os projetos pelo Google Drive ou entre em contato: <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br" style="color:#1abc9c;">arthur.oliveira99@cs.brazcubas.edu.br</a></p>
-      <div class="buttons">
-        <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" target="_blank">🔗 Acesso Projetos</a>
-        <a href="SECURITY.md" target="_blank">🔐 Política de Segurança</a>
-      </div>
-    </section>
-
-    <section class="carousel">
-      <h2>Galeria</h2>
-      <img class="slide" src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1">
-      <img class="slide" src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" style="display:none;">
-      <img class="slide" src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" style="display:none;">
-      <img class="slide" src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" style="display:none;">
-    </section>
-  </main>
+  </section>
 
   <footer>
-    &copy; 2025 Tukarth - Todos os direitos reservados.
+   @tukarth - Todos os direitos reservados. &copy; 2025
   </footer>
 
   <script>
+    let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
-    let index = 0;
 
-    function showSlide(i) {
-      slides.forEach((slide, j) => {
-        slide.style.display = i === j ? 'block' : 'none';
-      });
+    function mudarSlide(n) {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
     }
-
-    setInterval(() => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    }, 3000);
-
-    showSlide(index);
   </script>
-</body>
-</html>
