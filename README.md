@@ -1,219 +1,203 @@
-<!DOCTYPE html>
+<div style="background-color: black; padding: 10px; text-align: center;">
+<form action="firebase-config.js" method="post" style="text-align: center;">
+    <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 5px auto; padding: 8px;">
+    <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 5px auto; padding: 8px;">
+    <button type="submit" style="background: #007BFF; color: white; border: none; padding: 10px; cursor: pointer;">Entrar</button>     
+
+</form>
+</div>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vitrine de Projetos - Tukarth</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site com Fundo Preto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    /* RESET BÁSICO */
-    *, *::before, *::after {
-      box-sizing: border-box;
+    * {
       margin: 0;
       padding: 0;
-    }
-    body {
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+    }
+
+    body {
       background-color: #000;
       color: #fff;
       line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      overflow-x: hidden;
     }
 
-    /* CONTAINER PRINCIPAL */
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px 0;
-      flex: 1;
-    }
-
-    /* LOGIN BOX */
-    .login-box {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    }
-    .login-box input {
-      width: 80%;
-      max-width: 300px;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #333;
-      border-radius: 5px;
-      background-color: #1a1a1a;
-      color: #fff;
-    }
-    .login-box button {
-      padding: 12px 24px;
-      background-color: #1abc9c;
-      border: none;
-      border-radius: 5px;
-      color: #000;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .login-box button:hover {
-      background-color: #16a085;
-    }
-
-    /* HEADER */
     header {
-      background-color: #111;
-      padding: 30px 15px;
+      padding: 30px;
       text-align: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      margin-bottom: 40px;
-    }
-    header h1 {
-      font-size: 2.2rem;
-      font-weight: 500;
-      color: #1abc9c;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
-    /* SEÇÕES */
-    section {
-      background-color: #111;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-      margin-bottom: 40px;
+    header h1 {
+      font-size: 2.5rem;
+      animation: slideIn 1s ease-out;
     }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 2s ease-in;
+    }
+
     section h2 {
       font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #1abc9c;
-    }
-    section p {
-      margin-bottom: 15px;
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-    section a.email-link {
-      color: #1abc9c;
-      text-decoration: none;
-    }
-    section a.email-link:hover {
-      text-decoration: underline;
+      margin-bottom: 10px;
     }
 
-    /* BOTÕES DE AÇÃO */
-    .actions {
+    section p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 15px;
       margin-top: 20px;
     }
-    .actions a {
-      flex: 1 1 calc(50% - 15px);
-      text-align: center;
+
+    .buttons a {
       text-decoration: none;
-      padding: 12px 0;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-    .btn-primary {
-      background-color: #1abc9c;
-      color: #000;
-    }
-    .btn-primary:hover {
-      background-color: #16a085;
-    }
-    .btn-secondary {
-      background-color: #333;
       color: #fff;
-    }
-    .btn-secondary:hover {
-      background-color: #444;
-    }
-
-    /* GALERIA */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      justify-items: center;
-    }
-    .gallery img {
-      width: 100%;
-      max-width: 250px;
-      border-radius: 8px;
-      border: 1px solid #333;
-      object-fit: cover;
+      background: #1abc9c;
+      padding: 10px 15px;
+      font-size: 13px; /* DIMINUI O TAMANHO AQUI */
+      text-align: center;
+      border-radius: 10px;
+      transition: background 0.3s ease;
     }
 
-    /* FOOTER */
+    .buttons a:hover {
+      background: #16a085;
+    }
+
     footer {
       text-align: center;
-      padding: 20px 0;
+      margin-top: 50px;
+      padding: 20px;
       font-size: 0.9rem;
       color: #aaa;
-      border-top: 1px solid #222;
-      background-color: #000;
     }
 
-    @media (max-width: 600px) {
-      .actions a { flex: 1 1 100%; }
+    @keyframes slideIn {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Estilos da galeria */
+    .carousel img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .carousel button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1abc9c;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .carousel button:hover {
+      background-color: #16a085;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <section>
+    <h2>Projetos em Destaque.</h2>
+    <p>
+       Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.
+    </p>📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: arthur.oliveira99@cs.brazcubas.edu.br
 
-    <!-- Login Section -->
-    <div class="login-box">
-      <form action="firebase-config.js" method="post">
-        <input type="text" name="username" placeholder="Usuário" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
 
-    <!-- Header -->
-    <header>
-      <h1>Vitrine de Projetos</h1>
-    </header>
+    
+    <p>
+    
 
-    <!-- Destaques -->
-    <section id="destaques">
-      <h2>Projetos em Destaque</h2>
-      <p>Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.</p>
-      <p>📁 Para acessar os projetos, envie solicitação pelo Google Drive ou entre em contato: <a class="email-link" href="mailto:arthur.oliveira99@cs.brazcubas.edu.br">arthur.oliveira99@cs.brazcubas.edu.br</a></p>
-      <div class="actions">
-        <a class="btn-primary" href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" target="_blank">🔗 Acesso Projetos</a>
-        <a class="btn-secondary" href="YOUR_SECURITY_POLICY_LINK_OR_REPO.md" target="_blank">🔐 Security Policy</a>
-      </div>
-    </section>
 
-    <!-- Galeria -->
-    <section id="galeria">
-      <h2>Galeria</h2>
-      <p style="color:#bbb; font-size:0.9rem;">(Exibição estática; carrossel dinâmico pode ser adicionado via JS.)</p>
-      <div class="gallery">
-        <<img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
+
+    </p>
+
+        
+      
+    <div class="buttons">
+      <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing">
+        🔗 Acesso Projetos
+     
+      <a href="SECURITY.md"> Security Policy</a>
+    
+
+
+  <section id="galeria" style="text-align:center; margin-top:50px;">
+    <h2>Galeria</h2>
+   <div class="slideshow">
+    <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
     <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
     <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
     <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
-    <br
-    </section>
+    <br>
+    
 
-  </div>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
 
-  <!-- Footer -->
+    function showSlide() {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    function mudarSlide(step) {
+        index = (index + step + slides.length) % slides.length;
+        showSlide();
+    }
+
+    function autoSlide() {
+        index = (index + 1) % slides.length;
+        showSlide();
+    }
+
+    setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
+    showSlide(); // Exibe a primeira imagem
+</script>
+    </div>
+  </section>
+
   <footer>
-    @tukarth — Todos os direitos reservados. © 2025
+   @tukarth - Todos os direitos reservados. &copy; 2025
   </footer>
 
-</body>
-</html>
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function mudarSlide(n) {
+      slides[slideIndex].style.display = "none";
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
