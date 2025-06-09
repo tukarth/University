@@ -1,211 +1,462 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Site com Fundo Preto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Formulário de acesso ao projeto com design moderno">
+  <title>Acesso ao Projeto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #74EBD5;
+      --secondary: #ACB6E5;
+      --bg-dark: #0F2027;
+      --card-bg: rgba(42, 59, 64, 0.85);
+      --text-light: #F0F3F5;
+      --muted: #A0AEC0;
+      --hover: #5cb8a9;
+      --error: #FF6B6B;
+      --success: #51CF66;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #000;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Estilizando o header explicitamente adicionado */
-    header {
-      padding: 30px;
-      text-align: center;
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      animation: slideIn 1s ease-out;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      backdrop-filter: blur(10px); /* Note: backdrop-filter might not be supported in all browsers */
-      animation: fadeIn 2s ease-in;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-
-    section p {
-      font-size: 1rem;
-      margin-bottom: 20px;
-    }
-
-    .buttons {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(-45deg, #0F2027, #203A43, #2C5364);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      color: var(--text-light);
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin-top: 20px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.5;
     }
 
-    .buttons a {
-      text-decoration: none;
-      color: #fff;
-      background: #1abc9c;
-      padding: 10px 15px;
-      font-size: 13px;
-      text-align: center;
-      border-radius: 10px;
-      transition: background 0.3s ease;
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    .buttons a:hover {
-      background: #16a085;
+    .background-illustration {
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      max-width: min(600px, 90vw);
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(1px);
     }
 
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
-      border-top: 1px solid #222; /* Added a subtle top border to the footer */
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(-100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Estilos da galeria */
-    .slideshow { /* Changed from .carousel to .slideshow to match HTML */
-      position: relative; /* Added for potential button positioning if needed */
-      max-width: 600px; /* Constrain slideshow width */
-      margin: auto; /* Center slideshow */
-    }
-
-    .slideshow img.slide { /* Targeting .slide class within .slideshow */
+    .container {
+      z-index: 2;
+      max-width: 460px;
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      display: none; /* Initially hide all slides */
-    }
-    
-    .slideshow img.slide.active { /* Class to show the active slide */
-        display: block;
+      padding: 1.5rem;
     }
 
-    /* Carousel buttons - if you want to add prev/next buttons later */
-    /*
-    .carousel button {
-      margin: 10px 5px;
-      padding: 10px 20px;
-      font-size: 14px;
+    .card {
+      backdrop-filter: blur(12px) saturate(180%);
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 1.25rem;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(116,235,213,0.1) 0%, transparent 70%);
+      z-index: -1;
+      opacity: 0.3;
+      transform: rotate(30deg);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo-container {
+      margin: 0 auto 1.25rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      height: 70px;
+      width: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #233237;
+      box-shadow: 0 4px 15px rgba(116,235,213,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .logo-container:hover {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    .card-title {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.5px;
+    }
+
+    .card-description {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.75rem;
+      position: relative;
+    }
+
+    .form-group label {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      display: block;
+      font-weight: 500;
+      color: #D0D9E0;
+    }
+
+    .input-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .form-icon {
+      position: absolute;
+      left: 14px;
+      color: var(--muted);
+      display: flex;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.85rem 1rem 0.85rem 3.2rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(62, 80, 85, 0.7);
+      background-color: rgba(26, 40, 45, 0.6);
+      color: var(--text-light);
+      font-size: 1.02rem;
+      transition: all 0.25s ease;
+      font-weight: 500;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(116, 235, 213, 0.25);
+      background-color: rgba(20, 35, 40, 0.7);
+    }
+
+    .form-group input::placeholder {
+      color: #8A9BA8;
+      font-weight: 400;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 14px;
+      background: none;
       border: none;
-      border-radius: 8px;
-      background-color: #1abc9c;
-      color: #fff;
+      color: var(--muted);
       cursor: pointer;
-      transition: background 0.3s ease;
+      padding: 4px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
     }
 
-    .carousel button:hover {
-      background-color: #16a085;
+    .password-toggle:hover {
+      color: var(--primary);
+      background: rgba(255,255,255,0.05);
     }
-    */
+
+    .submit-button {
+      width: 100%;
+      padding: 0.95rem;
+      background: linear-gradient(to right, var(--primary), #8BD7C6);
+      color: #1A2D34;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      transition: all 0.3s ease;
+      font-size: 1.05rem;
+      letter-spacing: 0.3px;
+      margin-top: 0.5rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(116,235,213,0.3);
+    }
+
+    .submit-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(116,235,213,0.4);
+    }
+
+    .submit-button:active {
+      transform: translateY(1px);
+    }
+
+    .submit-button svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .submit-button:hover svg {
+      transform: translateX(3px);
+    }
+
+    .card-footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      color: var(--muted);
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+      opacity: 0.9;
+    }
+
+    .error-message {
+      color: var(--error);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .card {
+        padding: 1.75rem 1.5rem;
+      }
+      
+      .card-title {
+        font-size: 1.65rem;
+      }
+      
+      .form-group input {
+        padding: 0.75rem 0.9rem 0.75rem 2.9rem;
+      }
+      
+      .submit-button {
+        padding: 0.85rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .card {
+        padding: 1.5rem 1.25rem;
+      }
+      
+      .logo-container {
+        height: 60px;
+        width: 60px;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
   </style>
 </head>
 <body>
+  <img src="https://www.svgrepo.com/show/499790/ui-interface.svg" alt="Ilustração de fundo" class="background-illustration">
 
-  <div style="background-color: black; padding: 10px; text-align: center; border-bottom: 1px solid #222;">
-    <form action="firebase-config.js" method="post" style="text-align: center;">
-        <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 10px auto; padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #1a1a1a; color: #fff; width: 80%; max-width: 300px;">
-        <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 10px auto; padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #1a1a1a; color: #fff; width: 80%; max-width: 300px;">
-        <button type="submit" style="background: #007BFF; color: white; border: none; padding: 12px 20px; cursor: pointer; border-radius: 5px; font-size: 16px; margin-top: 5px;">Entrar</button>     
-    </form>
-  </div>
-
-  <header>
-
-  </header>
-
-  <main>
-    <section>
-      <h2>Projetos em Destaque</h2>
-      <p>
-         Este site apresenta projetos acadêmicos de forma simples, visual e organizada. A ideia é compartilhar soluções criativas e inspirar novas ideias.
-      </p>
-      <p>
-        📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br" style="color: #1abc9c; text-decoration: none;">arthur.oliveira99@cs.brazcubas.edu.br</a>
-      </p>
-      
-      <div class="buttons">
-        <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" target="_blank" rel="noopener noreferrer">🔗 Acesso Projetos</a>
-        <a href="SECURITY.md">Security Policy</a>
+  <main class="container">
+    <section class="card">
+      <div class="card-header">
+        <div class="logo-container">
+          <span>Logo</span> <!-- Adicione um logo ou texto aqui -->
+        </div>
+        <h2 class="card-title">Acesso ao Projeto</h2>
+        <p class="card-description">Entre para explorar recursos exclusivos...</p>
       </div>
-    </section>
 
-    <section id="galeria" style="text-align:center; margin-top:50px;">
-      <h2>Galeria</h2>
-      <div class="slideshow">
-        <!-- As imagens locais "Imagem do WhatsApp..." precisam estar acessíveis no mesmo diretório ou ter seus caminhos atualizados. -->
-        <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.45_4f67957e.jpg" alt="Foto 1" class="slide">
-        <img src="Imagem do WhatsApp de 2024-11-24 à(s) 16.34.49_450e3f18.jpg" alt="Foto 2" class="slide">
-        <img src="Imagem do WhatsApp de 2025-04-16 à(s) 17.30.28_e93abc65.jpg" alt="Foto 3" class="slide">
-        <img src="Imagem do WhatsApp de 2025-05-03 à(s) 11.24.30_9c988ad7.jpg" alt="Foto 4" class="slide">
+      <div class="card-content">
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="username">Usuário ou E-mail</label>
+            <div class="input-container">
+              <div class="form-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5.121 17.804A9 9 0 1118.364 4.636M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <input id="username" type="text" placeholder="Digite seu usuário ou e-mail" required aria-describedby="username-error">
+              <div id="username-error" class="error-message"></div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <div class="input-container">
+              <div class="form-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11v2h12v-2c0-1.657-1.343-3-3-3s-3 1.343-3 3z" />
+                </svg>
+              </div>
+              <input id="password" type="password" placeholder="Digite sua senha" required aria-describedby="password-error">
+              <button type="button" class="password-toggle" aria-label="Mostrar senha">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <div id="password-error" class="error-message"></div>
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+              <polyline points="10 17 15 12 10 7"/>
+              <line x1="15" x2="3" y1="12" y2="12"/>
+            </svg>
+            Acessar Projeto
+          </button>
+        </form>
       </div>
-  
-      <script>
-          let slides = document.querySelectorAll(".slideshow .slide"); // More specific selector
-          let currentIndex = 0; // Changed 'index' to 'currentIndex' for clarity
 
-          function showSlide(idx) { // Added idx parameter
-              slides.forEach((slide, i) => {
-                  // Using a class to control visibility is often better than direct style manipulation
-                  if (i === idx) {
-                      slide.classList.add('active');
-                  } else {
-                      slide.classList.remove('active');
-                  }
-              });
-          }
-
-          // Removed mudarSlide function as autoSlide handles next
-          // If manual controls (prev/next buttons) were added, mudarSlide would be useful.
-
-          function autoSlide() {
-              currentIndex = (currentIndex + 1) % slides.length;
-              showSlide(currentIndex);
-          }
-
-          if (slides.length > 0) { // Only run if slides exist
-            showSlide(currentIndex); // Exibe a primeira imagem
-            setInterval(autoSlide, 3000); // Troca automática a cada 3 segundos
-          }
-      </script>
+      <footer class="card-footer">
+        <p>Plataforma segura de gerenciamento de projetos</p>
+        <div class="footer-links">
+          <a href="#" aria-label="Recuperar senha">Esqueceu a senha?</a>
+          <a href="#" aria-label="Criar nova conta">Criar conta</a>
+          <a href="#" aria-label="Suporte técnico">Ajuda</a>
+        </div>
+      </footer>
     </section>
   </main>
 
-  <footer>
-   @tukarth - Todos os direitos reservados. &copy; 2025
-  </footer>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.0/firebase-analytics.js";
 
-  <!-- O script redundante que estava aqui foi removido -->
-</body>
-</html>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAEtOJtXMIclBzLNNsEXJKqF4Rsqg_AAHs",
+      authDomain: "arthur-dba38.firebaseapp.com",
+      projectId: "arthur-dba38",
+      storageBucket: "arthur-dba38.firebasestorage.app",
+      messagingSenderId: "226852614993",
+      appId: "1:226852614993:web:c4b2ba9eb6a09772e69970",
+      measurementId: "G-WJDD8F5PMC"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      // Validação básica
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      let isValid = true;
+      
+      if (!username.trim()) {
+        showError('username-error', 'Por favor, informe seu usuário ou e-mail');
+        isValid = false;
+      }
+      
+      if (!password.trim()) {
+        showError('password-error', 'Por favor, informe sua senha');
+        isValid = false;
+      }
+      
+      if (isValid) {
+        // Simulação de loading
+        const button = document.querySelector('.submit-button');
+        const originalText = button.innerHTML;
+        button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin">
+          <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+        </svg> Autenticando...`;
+        button.disabled = true;
+        
+        // Simulação de requisição
+        setTimeout(() => {
+          window.location.href = "<script src='https://cdn.jsdelivr.net/npm/@supabase/supabase-js'></script>";
+        }, 1500);
+      }
+    });
+    
+    // Toggle de senha
+    document.querySelector('.password-toggle').addEventListener('click', function() {
+      const passwordInput = document.getElementById('password');
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      this.querySelector('svg').style.opacity = type === 'password' ? 0.7 : 1;
+    });
+    
+    // Limpar erros ao digitar
+    document.getElementById('username').addEventListener('input', () => hideError('username-error'));
+    document.getElementById('password').addEventListener('input', () => hideError('password-error'));
+    
+    function showError(elementId, message) {
+      const errorElement = document.getElementById(elementId);
+      errorElement.textContent = message;
+      errorElement.style.display = 'block';
+    }
+    
+    function hideError(elementId) {
+      const errorElement = document.getElementById(elementId);
+      errorElement.style.display = 'none';
+    }
+    
+    //
