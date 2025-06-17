@@ -146,13 +146,14 @@
       <p>
         📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br" style="color: #1abc9c; text-decoration: none;">arthur.oliveira99@cs.brazcubas.edu.br</a>
       </p>
+      
       <div class="buttons">
         <a href="https://tukarth.github.io/Zyx/" target="_blank" rel="noopener noreferrer">🔗 Acesso Zyx</a>
       <div class="buttons">
         <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" target="_blank" rel="noopener noreferrer">🔗 Acesso Projetos</a>
         <a href="SECURITY.md">Security Policy</a>
       </div>
-    </section>
+    
 
     <section id="galeria" style="text-align:center; margin-top:50px;">
       <h2>Galeria</h2>
