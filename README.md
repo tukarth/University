@@ -133,14 +133,6 @@
 </head>
 <body>
 
-  <div style="background-color: black; padding: 10px; text-align: center; border-bottom: 1px solid #222;">
-    <form action="firebase-config.js" method="post" style="text-align: center;">
-        <input type="text" placeholder="Usuário" name="username" required style="display: block; margin: 10px auto; padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #1a1a1a; color: #fff; width: 80%; max-width: 300px;">
-        <input type="password" placeholder="Senha" name="password" required style="display: block; margin: 10px auto; padding: 10px; border-radius: 5px; border: 1px solid #333; background-color: #1a1a1a; color: #fff; width: 80%; max-width: 300px;">
-        <button type="submit" style="background: #007BFF; color: white; border: none; padding: 12px 20px; cursor: pointer; border-radius: 5px; font-size: 16px; margin-top: 5px;">Entrar</button>     
-    </form>
-  </div>
-
   <header>
 
   </header>
@@ -154,7 +146,8 @@
       <p>
         📁 Para acessar os projetos, envie uma solicitação pelo Google Drive ou entre em contato: <a href="mailto:arthur.oliveira99@cs.brazcubas.edu.br" style="color: #1abc9c; text-decoration: none;">arthur.oliveira99@cs.brazcubas.edu.br</a>
       </p>
-      
+      <div class="buttons">
+        <a href="https://tukarth.github.io/Zyx/" target="_blank" rel="noopener noreferrer">🔗 Acesso Zyx</a>
       <div class="buttons">
         <a href="https://drive.google.com/drive/folders/1bJ27rtxhDxfna8sEtnO4MQNsp3kygkso?usp=sharing" target="_blank" rel="noopener noreferrer">🔗 Acesso Projetos</a>
         <a href="SECURITY.md">Security Policy</a>
