@@ -1,19 +1,28 @@
-# 🎯 Política de Qualidade - University
+# Política de Qualidade
 
-Na **University**, buscamos oferecer uma plataforma digital confiável, segura e de fácil navegação.
+Na **ZYX** e na **University**, nos comprometemos a garantir a excelência em nossas soluções tecnológicas.
 
-Nos comprometemos a:
+## Compromissos
 
-- Garantir a qualidade, segurança e integridade das informações.
-- Melhorar continuamente nossos serviços e recursos.
-- Atuar com ética, responsabilidade e transparência.
+- **Segurança**: Proteção robusta de dados e serviços.
+- **Inovação**: Melhoria contínua das plataformas.
+- **Ética**: Transparência e responsabilidade nas operações.
+- **Acessibilidade**: Processos otimizados para todos os usuários.
+- **Suporte**: Atendimento técnico especializado.
 
-## 📬 Contato
+## Respostas a Incidentes
 
-Em caso de dúvidas ou sugestões, entre em contato:
+- **Detecção Rápida**: Monitoramento constante para identificação de incidentes.
+- **Resposta Imediata**: Planos de ação para mitigar impactos.
+- **Comunicação**: Informar usuários sobre incidentes relevantes.
 
-**arthur.oliveira99@cs.brazcubas.edu.br**
+## Gestão de Vulnerabilidades
 
----
+- **Avaliação Contínua**: Análise regular de sistemas para identificar falhas.
+- **Correção Proativa**: Implementação de atualizações e patches.
+- **Treinamento**: Capacitação da equipe para reconhecer e lidar com vulnerabilidades.
 
-**University** – Compromisso com inovação e qualidade.
+## Contato
+
+Para dúvidas ou sugestões:  
+**Email:** arthur.oliveira99@cs.brazcubas.edu.br
