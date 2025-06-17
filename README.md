@@ -194,12 +194,11 @@
           }
       </script>
     </section>
-  </main>
+
 
   <footer>
    @tukarth - Todos os direitos reservados. &copy; 2025
   </footer>
 
   <!-- O script redundante que estava aqui foi removido -->
-</body>
-</html>
+
